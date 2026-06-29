@@ -1,0 +1,11 @@
+node_modules/
+.gemini/
+CBA Sucre Website Material*
+American Spaces Logos*
+*.png
+*.webp
+*.img
+*.zip
+*.rar
+.DS_Store
+Thumbs.db

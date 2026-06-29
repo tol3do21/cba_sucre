@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centro Boliviano Americano · Sucre</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Tendiendo puentes entre culturas desde 1962. Programas de inglés, EducationUSA, Fulbright y eventos America 250 en Sucre, Bolivia.">
+  <meta name="keywords" content="CBA, CBA Sucre, inglés, cursos de inglés, Bolivia, Sucre, EducationUSA, Fulbright, becas, America 250">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="Centro Boliviano Americano · Sucre">
+  <meta property="og:description" content="Tendiendo puentes entre culturas desde 1962. Cursos de inglés para todas las edades, asesoría de estudios en EE.UU., y eventos culturales.">
+  <meta property="og:image" content="logos/logo-cba.png">
+  <meta property="og:url" content="https://cbasucre.org">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="logos/logo-cba.png" type="image/png">
+
+  <!-- Google Fonts Preconnect & Imports (Optimizado) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0A2540',
+            'navy-deep': '#071A30',
+            red: '#B22234',
+            'red-deep': '#8E1A28',
+            cream: '#F5EFE0',
+            'cream-deep': '#EBE2CC',
+            gold: '#C9A961',
+            ink: '#1A1A1A',
+            muted: '#5B6470',
+            green: '#5B8C5A',
+          },
+          fontFamily: {
+            playfair: ['"Playfair Display"', 'Georgia', 'serif'],
+            inter: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Interactive JavaScript File -->
+  <script src="main.js" defer></script>
+</head>
+<body class="antialiased">
+
+  <div class="flex flex-col min-h-screen">
+    
+    <!-- ── Header ── -->
+    <header class="sticky top-0 z-50 bg-navy text-white border-b-3 border-red">
+      <div class="wrap flex items-center justify-between gap-4 py-3.5">
+        
+        <!-- Logo Branding -->
+        <a href="#" class="flex items-center gap-2.5 no-underline text-white flex-shrink-0">
+          <img src="logos/logo-cba.png" alt="Logo Centro Boliviano Americano Sucre" class="w-9 h-9 object-contain bg-white rounded-full border border-red-500 p-0.5 flex-shrink-0">
+          <div class="leading-tight">
+            <div class="font-playfair text-sm font-bold whitespace-nowrap">Centro Boliviano Americano</div>
+            <div class="text-[9px] tracking-widest opacity-65 uppercase whitespace-nowrap">Sucre · Bolivia · Est. 1962</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-4 lg:gap-6 flex-wrap overflow-hidden">
+          <a href="#" class="text-white text-xs font-semibold tracking-wide opacity-90 transition-opacity whitespace-nowrap hover:opacity-100">Inicio</a>
+          <a href="#nosotros" class="text-white text-xs font-semibold tracking-wide opacity-90 transition-opacity whitespace-nowrap hover:opacity-100">Quiénes Somos</a>
+          <a href="#programas" class="text-white text-xs font-semibold tracking-wide opacity-90 transition-opacity whitespace-nowrap hover:opacity-100">Programas</a>
+          <a href="#calendario" class="text-white text-xs font-semibold tracking-wide opacity-90 transition-opacity whitespace-nowrap hover:opacity-100">Calendario</a>
+          <a href="#becas" class="text-white text-xs font-semibold tracking-wide opacity-90 transition-opacity whitespace-nowrap hover:opacity-100">Becas</a>
+          <a href="#usa250" class="text-white text-xs font-semibold tracking-wide opacity-90 transition-opacity whitespace-nowrap hover:opacity-100">USA 250</a>
+          <a href="#contacto" class="text-white text-xs font-semibold tracking-wide opacity-90 transition-opacity whitespace-nowrap hover:opacity-100">Contacto</a>
+        </nav>
+
+        <!-- Header CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-2 flex-shrink-0">
+          <a href="https://sistema-academico.cbasucre.org" target="_blank" rel="noopener noreferrer" class="bg-transparent text-white border border-white/35 px-3 py-2 text-[10px] tracking-widest uppercase font-semibold no-underline whitespace-nowrap hover:bg-white/5 transition-colors">Sistema académico</a>
+          <a href="#inscripcion" class="bg-red text-white px-4 py-2 text-[10px] tracking-widest uppercase font-bold no-underline whitespace-nowrap hover:bg-red-deep transition-colors">Inscríbete</a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" aria-label="Abrir menú" class="md:hidden flex justify-center items-center w-8 h-8 bg-transparent border-none cursor-pointer">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+          </svg>
+        </button>
+
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-nav" class="hidden md:hidden bg-navy-deep border-t border-white/10">
+        <div class="flex flex-col gap-3 p-4">
+          <a href="#" class="text-white text-sm font-semibold py-2 border-b border-white/5 hover:opacity-75">Inicio</a>
+          <a href="#nosotros" class="text-white text-sm font-semibold py-2 border-b border-white/5 hover:opacity-75">Quiénes Somos</a>
+          <a href="#programas" class="text-white text-sm font-semibold py-2 border-b border-white/5 hover:opacity-75">Programas</a>
+          <a href="#calendario" class="text-white text-sm font-semibold py-2 border-b border-white/5 hover:opacity-75">Calendario</a>
+          <a href="#becas" class="text-white text-sm font-semibold py-2 border-b border-white/5 hover:opacity-75">Becas</a>
+          <a href="#usa250" class="text-white text-sm font-semibold py-2 border-b border-white/5 hover:opacity-75">USA 250</a>
+          <a href="#contacto" class="text-white text-sm font-semibold py-2 border-b border-white/5 hover:opacity-75">Contacto</a>
+          <div class="flex flex-col gap-2 mt-2">
+            <a href="https://sistema-academico.cbasucre.org" target="_blank" rel="noopener noreferrer" class="bg-transparent text-white border border-white/30 py-2.5 text-center text-xs tracking-wider uppercase font-semibold">Sistema académico</a>
+            <a href="#inscripcion" class="bg-red text-white py-2.5 text-center text-xs tracking-wider uppercase font-bold">Inscríbete</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── Notification Bar ── -->
+    <div class="bg-cream border-b border-black/5">
+      <div class="wrap flex items-center justify-between gap-4 py-2.5">
+        <div class="flex items-center gap-3 text-xs md:text-sm text-ink">
+          <span class="bg-red text-white px-2 py-0.5 text-[9px] tracking-widest font-bold flex-shrink-0 rounded-none">NUEVO</span>
+          <span>Inscripciones abiertas para el ciclo <strong>Mayo – Julio 2026</strong>. Niveles para todas las edades.</span>
+        </div>
+        <a href="#inscripcion" class="text-[10px] md:text-xs text-navy font-bold tracking-widest uppercase no-underline whitespace-nowrap hover:underline">Inscribirme →</a>
+      </div>
+    </div>
+
+    <!-- ── Main Content ── -->
+    <main class="flex-grow">
+
+      <!-- ── Hero Section (CBA Sucre · Split Layout) ── -->
+      <section id="hero" class="relative bg-navy text-white overflow-hidden min-h-[650px] flex flex-col justify-center">
+        
+        <!-- Contenedor del fondo dividido -->
+        <div class="absolute inset-0 flex pointer-events-none">
+          <!-- Lado izquierdo oscuro -->
+          <div class="w-full md:w-[50%] bg-navy-deep"></div>
+          <!-- Lado derecho con la foto real de docente y alumno -->
+          <div class="hidden md:block md:w-[50%] relative">
+            <img 
+              src="images/teacher_student.webp" 
+              alt="Docente y estudiante en clases en el Centro Boliviano Americano Sucre" 
+              class="w-full h-full object-cover object-[center_22%]"
+            >
+            <!-- Degradado izquierdo más fino para mostrar más foto -->
+            <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-navy-deep to-transparent"></div>
+            <!-- Overlay sutil para integrar con el fondo oscuro -->
+            <div class="absolute inset-0 bg-navy-deep/10"></div>
+          </div>
+        </div>
+
+        <!-- Franja de Programas: anclada encima de la tricolor -->
+        <div class="absolute bottom-[5px] left-0 right-0 bg-navy-deep/70 backdrop-blur-sm border-t border-white/8 pointer-events-auto z-10">
+          <div class="wrap">
+            <div class="flex items-stretch divide-x divide-white/8">
+
+              <!-- Inglés -->
+              <a href="#programas" id="hero-prog-ingles" class="flex items-center gap-3 px-5 py-3.5 hover:bg-white/5 transition-colors flex-1 group">
+                <svg class="w-5 h-5 text-white/40 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/>
+                </svg>
+                <div>
+                  <div class="text-[10px] font-bold tracking-wide group-hover:text-gold transition-colors">Inglés</div>
+                  <div class="text-[8px] opacity-45 tracking-wide">General · Conversacional</div>
+                </div>
+              </a>
+
+              <!-- TOEFL -->
+              <a href="#programas" id="hero-prog-toefl" class="flex items-center gap-3 px-5 py-3.5 hover:bg-white/5 transition-colors flex-1 group">
+                <svg class="w-5 h-5 text-white/40 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25Z"/>
+                </svg>
+                <div>
+                  <div class="text-[10px] font-bold tracking-wide group-hover:text-gold transition-colors">TOEFL</div>
+                  <div class="text-[8px] opacity-45 tracking-wide">Preparación oficial</div>
+                </div>
+              </a>
+
+              <!-- Cambridge -->
+              <a href="#programas" id="hero-prog-cambridge" class="flex items-center gap-3 px-5 py-3.5 hover:bg-white/5 transition-colors flex-1 group">
+                <svg class="w-5 h-5 text-white/40 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"/>
+                </svg>
+                <div>
+                  <div class="text-[10px] font-bold tracking-wide group-hover:text-gold transition-colors">Cambridge</div>
+                  <div class="text-[8px] opacity-45 tracking-wide">KET · PET · FCE</div>
+                </div>
+              </a>
+
+              <!-- Becas -->
+              <a href="#becas" id="hero-prog-becas" class="flex items-center gap-3 px-5 py-3.5 hover:bg-white/5 transition-colors flex-1 group">
+                <svg class="w-5 h-5 text-white/40 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"/>
+                </svg>
+                <div>
+                  <div class="text-[10px] font-bold tracking-wide group-hover:text-gold transition-colors">Becas</div>
+                  <div class="text-[8px] opacity-45 tracking-wide">Fulbright · USAID</div>
+                </div>
+              </a>
+
+              <!-- EducationUSA -->
+              <a href="#becas" id="hero-prog-educationusa" class="flex items-center gap-3 px-5 py-3.5 hover:bg-white/5 transition-colors flex-1 group">
+                <svg class="w-5 h-5 text-white/40 group-hover:text-gold transition-colors flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253M3.157 7.582A8.959 8.959 0 0 0 3 12c0 .778.099 1.533.284 2.253"/>
+                </svg>
+                <div>
+                  <div class="text-[10px] font-bold tracking-wide group-hover:text-gold transition-colors">EducationUSA</div>
+                  <div class="text-[8px] opacity-45 tracking-wide">Asesoría oficial</div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Franja Tricolor Inferior (Bolivia) -->
+        <div class="absolute bottom-0 left-0 right-0 h-[5px] flex pointer-events-none z-10">
+          <div class="flex-1 bg-red"></div>
+          <div class="flex-1 bg-gold"></div>
+          <div class="flex-1 bg-[#007a33]"></div>
+        </div>
+
+        <div class="wrap relative z-10 py-14 md:py-20 pb-28 md:pb-32">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+
+            <!-- Columna Izquierda: Contenido Institucional CBA -->
+            <div class="w-full pr-0 lg:pr-10">
+
+              <!-- Eyebrow -->
+              <div class="flex items-center gap-3 mb-8 flex-wrap select-none">
+                <div class="inline-flex items-center gap-2.5 bg-navy-deep/80 backdrop-blur-md px-3.5 py-1.5 border border-white/15">
+                  <img src="logos/logo-cba.png" alt="Logo Centro Boliviano Americano Sucre" class="h-5 w-auto object-contain">
+                  <div class="h-3 w-px bg-white/30"></div>
+                  <span class="text-[10px] tracking-[0.18em] font-bold">CENTRO BOLIVIANO AMERICANO</span>
+                </div>
+                <div class="inline-flex items-center gap-1.5 bg-red px-3 py-1.5 text-[9px] tracking-widest font-bold">
+                  &#9733; SUCRE &middot; BOLIVIA
+                </div>
+              </div>
+
+              <!-- Titular en MAYÚSCULAS -->
+              <h1 class="font-playfair text-5xl md:text-6xl lg:text-[72px] font-black leading-[0.9] mb-6 tracking-tight uppercase">
+                TU PUERTA AL<br>
+                <span class="text-gold italic font-normal normal-case">inglés</span> Y AL<br>
+                <span class="text-gold italic font-normal normal-case">mundo.</span>
+              </h1>
+
+              <!-- Bajada -->
+              <p class="text-sm md:text-[15px] leading-relaxed opacity-80 mb-8 max-w-lg">
+                Más de <strong class="text-white font-bold">70 años</strong> formando líderes bilingües en Sucre. Inglés para todas las edades, exámenes internacionales y becas al exterior.
+              </p>
+
+              <!-- Propuesta de Valor: 3 bullets con SVG check -->
+              <ul class="flex flex-col gap-3 mb-9">
+                <li class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
+                  </svg>
+                  <span class="text-sm text-white/85">Clases presenciales y en línea para todas las edades</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
+                  </svg>
+                  <span class="text-sm text-white/85">Certificaciones TOEFL, Cambridge y EducationUSA oficiales</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
+                  </svg>
+                  <span class="text-sm text-white/85">Acceso a becas Fulbright, USAID y programas de intercambio</span>
+                </li>
+              </ul>
+
+              <!-- CTAs lado a lado -->
+              <div class="flex gap-3 mb-10">
+                <a href="#inscripcion" id="hero-cta-inscripcion" class="btn btn-red text-center text-xs py-4 flex-1 shadow-lg">
+                  Inscríbete ahora &rarr;
+                </a>
+                <a href="#programas" id="hero-cta-programas" class="btn btn-ghost text-center text-xs py-4 flex-1">
+                  Ver programas
+                </a>
+              </div>
+
+              <!-- Stats: 3 columnas ancho completo -->
+              <div class="grid grid-cols-3 gap-0 pt-7 border-t border-white/12 select-none">
+                <div class="text-center px-4 border-r border-white/10">
+                  <div class="font-playfair text-3xl md:text-4xl font-black italic text-gold leading-none mb-1">70+</div>
+                  <div class="text-[9px] tracking-widest opacity-50 font-bold uppercase">Años de historia</div>
+                </div>
+                <div class="text-center px-4 border-r border-white/10">
+                  <div class="font-playfair text-3xl md:text-4xl font-black italic text-gold leading-none mb-1">1,600+</div>
+                  <div class="text-[9px] tracking-widest opacity-50 font-bold uppercase">Alumnos activos</div>
+                </div>
+                <div class="text-center px-4">
+                  <div class="font-playfair text-3xl md:text-4xl font-black italic text-gold leading-none mb-1">120+</div>
+                  <div class="text-[9px] tracking-widest opacity-50 font-bold uppercase">Becas otorgadas</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Columna Derecha: Vacía — deja ver la foto de fondo -->
+            <div class="hidden lg:block"></div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- ── About Us Section (Quiénes Somos) ── -->
+      <section id="nosotros" class="relative bg-slate-100 py-14 md:py-24 border-t border-b border-navy/15 overflow-hidden">
+        
+        <!-- Hand-drawn sketch of the CBA Sucre facade as a watermark background -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-[0.18] pointer-events-none mix-blend-multiply filter brightness-[102%] contrast-[105%]" style="background-image: url('images/fachada_sketch.jpg');"></div>
+        
+        <div class="wrap relative z-10">
+          
+          <!-- Section Title -->
+          <div class="text-center mb-12">
+            <p class="eyebrow">★ ★ ★  Quiénes Somos  ★ ★ ★</p>
+            <h2 class="section-h2 text-3xl md:text-5xl lg:text-6xl">Más de <span class="italic font-normal">70 años</span> de historia y cultura.</h2>
+          </div>
+
+          <!-- Mission and Pillars Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 mb-16 items-start">
+            
+            <!-- Left Info Column -->
+            <div class="bg-white/90 backdrop-blur-sm border border-navy/10 p-6 md:p-8 shadow-sm">
+              <div class="text-[10px] tracking-widest text-red font-bold mb-3">MISIÓN INSTITUCIONAL</div>
+              <blockquote class="font-playfair text-base md:text-lg lg:text-xl italic text-navy leading-relaxed mb-6 pl-4 border-l-3 border-red">
+                "Proporcionar educación de alto nivel en idioma inglés sin ninguna discriminación, utilizando metodología actualizada y tecnología moderna con un enfoque humanista centrado en el estudiante."
+              </blockquote>
+              <p class="text-sm md:text-base leading-relaxed text-ink mb-4">
+                Fundado originalmente en la década de los 50 y refundado históricamente el <strong>2 de mayo de 1991</strong> bajo el liderazgo de los profesores visionarios <strong>Mery Derpic de Solares</strong> y <strong>Eduardo Chumacero</strong>, el Centro Boliviano Americano Sucre se ha consolidado como el referente académico y de intercambio cultural de la capital.
+              </p>
+              <p class="text-sm md:text-base leading-relaxed text-ink">
+                Como <strong>Fundación Educativa y Cultural</strong> sin fines de lucro, operamos en nuestra Casa Central (Calle Calvo 301) y la Biblioteca Pública "Roberto Callahan" (Calle Calvo 332). Con el aval del Ministerio de Educación (R.M. 0049/2019), certificamos a nivel nacional la capacitación en inglés avanzado.
+              </p>
+            </div>
+
+            <!-- Right Pillars Column -->
+            <div class="bg-white/90 backdrop-blur-sm border border-navy/10 p-6 md:p-8 shadow-sm">
+              <div class="text-[10px] tracking-widest text-red font-bold mb-3.5">PILARES FUNDAMENTALES</div>
+              <div class="border border-navy">
+                
+                <!-- Pillar 1 -->
+                <div class="grid grid-cols-[50px_1fr] border-b border-navy/15 bg-white/70">
+                  <div class="bg-navy text-gold grid place-items-center font-playfair text-lg italic font-black">01</div>
+                  <div class="p-4">
+                    <div class="font-playfair text-sm md:text-base text-navy font-bold mb-1">Enseñanza Integral</div>
+                    <div class="text-[11.5px] text-muted leading-relaxed">Cursos de inglés, español y quechua para todas las edades, con enfoque humanista y material didáctico moderno.</div>
+                  </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="grid grid-cols-[50px_1fr] border-b border-navy/15 bg-white/70">
+                  <div class="bg-navy text-gold grid place-items-center font-playfair text-lg italic font-black">02</div>
+                  <div class="p-4">
+                    <div class="font-playfair text-sm md:text-base text-navy font-bold mb-1">Intercambio Cultural</div>
+                    <div class="text-[11.5px] text-muted leading-relaxed">Actividades culturales, exposiciones y nexo interinstitucional entre Bolivia y los Estados Unidos.</div>
+                  </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="grid grid-cols-[50px_1fr] bg-white/70">
+                  <div class="bg-navy text-gold grid place-items-center font-playfair text-lg italic font-black">03</div>
+                  <div class="p-4">
+                    <div class="font-playfair text-sm md:text-base text-navy font-bold mb-1">Asesoría y Exámenes</div>
+                    <div class="text-[11.5px] text-muted leading-relaxed">Asesoría de estudios con EducationUSA, administración de exámenes TOEFL, ECCE, ECPE y gestión de becas de excelencia.</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- History Timeline -->
+          <div class="border-t border-navy/15 pt-12 mt-8 bg-white/90 backdrop-blur-sm border border-navy/10 p-6 md:p-8 shadow-sm">
+            <p class="eyebrow text-center mb-9">★ ★ ★  Historia del CBA Sucre  ★ ★ ★</p>
+            <div class="relative max-w-5xl mx-auto overflow-x-auto">
+              
+              <!-- Timeline Horizontal Rule -->
+              <div class="absolute left-0 right-0 top-[36px] h-[1px] bg-navy hidden md:block"></div>
+              <div class="absolute left-0 right-0 top-[39px] h-[1px] bg-navy hidden md:block"></div>
+              
+              <!-- Timeline Nodes -->
+              <div class="grid grid-cols-2 md:grid-cols-6 gap-6 md:gap-4 min-w-[550px] md:min-w-0">
+                
+                <!-- Node Años 50 -->
+                <div class="relative pt-6 md:pt-14 text-center">
+                  <div class="absolute top-[27px] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-navy border-3 border-cream hidden md:block"></div>
+                  <div class="font-playfair text-xl md:text-2xl font-black text-navy italic tracking-tight leading-none">Años 50</div>
+                  <div class="font-playfair text-xs text-red font-bold mt-1">Inicios</div>
+                  <div class="text-[11px] text-ink leading-relaxed mt-2 px-1">Actividades culturales iniciadas en Sucre bajo auspicio de USIS.</div>
+                </div>
+
+                <!-- Node 1970 -->
+                <div class="relative pt-6 md:pt-14 text-center">
+                  <div class="absolute top-[27px] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-navy border-3 border-cream hidden md:block"></div>
+                  <div class="font-playfair text-xl md:text-2xl font-black text-navy italic tracking-tight leading-none">1970</div>
+                  <div class="font-playfair text-xs text-red font-bold mt-1">Cierre Forzoso</div>
+                  <div class="text-[11px] text-ink leading-relaxed mt-2 px-1">Toma y saqueo de las sedes; se suspende el servicio por 20 años.</div>
+                </div>
+
+                <!-- Node 1991 -->
+                <div class="relative pt-6 md:pt-14 text-center">
+                  <div class="absolute top-[27px] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-navy border-3 border-cream hidden md:block"></div>
+                  <div class="font-playfair text-xl md:text-2xl font-black text-navy italic tracking-tight leading-none">1991</div>
+                  <div class="font-playfair text-xs text-red font-bold mt-1">Reapertura</div>
+                  <div class="text-[11px] text-ink leading-relaxed mt-2 px-1">Reinicio el 2 de mayo por Mery Derpic y E. Chumacero con 90 alumnos.</div>
+                </div>
+
+                <!-- Node 1997 -->
+                <div class="relative pt-6 md:pt-14 text-center">
+                  <div class="absolute top-[27px] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-navy border-3 border-cream hidden md:block"></div>
+                  <div class="font-playfair text-xl md:text-2xl font-black text-navy italic tracking-tight leading-none">1997</div>
+                  <div class="font-playfair text-xs text-red font-bold mt-1">Fundación</div>
+                  <div class="text-[11px] text-ink leading-relaxed mt-2 px-1">Se constituye legalmente la Fundación Educativa y Cultural CBA Sucre.</div>
+                </div>
+
+                <!-- Node 2007 -->
+                <div class="relative pt-6 md:pt-14 text-center">
+                  <div class="absolute top-[27px] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-navy border-3 border-cream hidden md:block"></div>
+                  <div class="font-playfair text-xl md:text-2xl font-black text-navy italic tracking-tight leading-none">2007</div>
+                  <div class="font-playfair text-xs text-red font-bold mt-1">R. M. 281/07</div>
+                  <div class="text-[11px] text-ink leading-relaxed mt-2 px-1">Acreditación ministerial oficial para nivel Técnico Medio.</div>
+                </div>
+
+                <!-- Node 2026 -->
+                <div class="relative pt-6 md:pt-14 text-center">
+                  <div class="absolute top-[27px] left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red border-3 border-cream hidden md:block"></div>
+                  <div class="font-playfair text-xl md:text-2xl font-black text-navy italic tracking-tight leading-none">2026</div>
+                  <div class="font-playfair text-xs text-red font-bold mt-1">Presente</div>
+                  <div class="text-[11px] text-ink leading-relaxed mt-2 px-1">Más de 1,600 egresados calificados y sede oficial de America 250.</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── Programs Section (Programas de Inglés) ── -->
+      <section id="programas" class="bg-cream pb-14 md:pb-24">
+        <div class="wrap">
+          
+          <!-- Section Title -->
+          <div class="text-center mb-10">
+            <p class="eyebrow">★ ★ ★  Programas de Inglés  ★ ★ ★</p>
+            <h2 class="section-h2 text-3xl md:text-5xl lg:text-6xl mb-3.5">Una clase para <span class="italic font-normal">cada</span> edad.</h2>
+            <p class="text-xs md:text-sm text-muted italic max-w-lg mx-auto leading-relaxed">
+              Docentes certificados por el Departamento de Estado de EE.UU. · Currícula Cambridge & marco común europeo.
+            </p>
+          </div>
+
+          <!-- Tab Selector Buttons -->
+          <div class="grid grid-cols-1 md:grid-cols-3 border border-navy bg-white mb-0">
+            
+            <!-- Tab Kids -->
+            <button id="tab-btn-kids" class="relative bg-white text-navy border-b md:border-b-0 md:border-r border-navy py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none">
+              <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden accent-bar"></div>
+              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60">NIVEL · 01</div>
+              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none">Niños</div>
+              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair">6 – 11 años</div>
+              <div class="h-[1px] w-full bg-navy/12 my-1 accent-divider"></div>
+              <div class="text-[10px] tracking-wider opacity-60">10 niveles · 2 años</div>
+            </button>
+
+            <!-- Tab Teens -->
+            <button id="tab-btn-teens" class="relative bg-navy text-white border-b md:border-b-0 md:border-r border-navy py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none">
+              <div class="absolute inset-x-0 top-0 h-[3px] bg-red accent-bar"></div>
+              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60">NIVEL · 02</div>
+              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none">Adolescentes</div>
+              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair">12 – 16 años</div>
+              <div class="h-[1px] w-full bg-white/20 my-1 accent-divider"></div>
+              <div class="text-[10px] tracking-wider opacity-60">12 niveles · 2½ años</div>
+            </button>
+
+            <!-- Tab Adults -->
+            <button id="tab-btn-adults" class="relative bg-white text-navy border-none py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none">
+              <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden accent-bar"></div>
+              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60">NIVEL · 03</div>
+              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none">Jóvenes y Adultos</div>
+              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair">17+ años</div>
+              <div class="h-[1px] w-full bg-navy/12 my-1 accent-divider"></div>
+              <div class="text-[10px] tracking-wider opacity-60">14 niveles · 3 años</div>
+            </button>
+
+          </div>
+
+          <!-- Tab Content Display Area -->
+          <div class="grid grid-cols-1 md:grid-cols-[240px_1fr_200px] lg:grid-cols-[260px_1fr_220px] border border-navy border-t-0 bg-white">
+            
+            <!-- Left Column: Unsplash Image Card -->
+            <div id="program-img" class="bg-cover bg-center min-h-[220px] md:min-h-[340px] relative">
+              <div class="absolute inset-0 bg-gradient-to-b from-navy/15 to-navy/65"></div>
+              <div id="program-img-label" class="absolute left-4 bottom-4 text-white font-playfair italic text-sm">Inglés para adolescentes</div>
+            </div>
+
+            <!-- Middle Column: Main Information and Bullets -->
+            <div class="p-6 md:p-9 border-t md:border-t-0 md:border-l border-r border-navy/12 flex flex-col justify-between">
+              <p id="program-desc" class="font-playfair italic text-sm md:text-base lg:text-lg leading-relaxed text-navy mt-0 mb-6">
+                Inglés con el libro SUCCESS — la última palabra en textos para adolescentes, con temáticas y personajes apropiados para su edad.
+              </p>
+              
+              <!-- Check bullets list -->
+              <div id="program-bullets" class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                <!-- Javascript will insert bullets here -->
+              </div>
+              
+              <!-- Level Indicator Badges -->
+              <div id="program-badges" class="flex flex-wrap gap-1.5 pt-4 border-t border-navy/10 select-none">
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-navy text-white">A1</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-navy text-white">A1+</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-navy text-white">A2</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">A2+</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">B1</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">B1+</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">B2</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">B2+</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">C1</span>
+                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">C2</span>
+              </div>
+            </div>
+
+            <!-- Right Column: Schedules & Action Button -->
+            <div class="p-6 md:p-7 flex flex-col justify-between border-t md:border-t-0">
+              <div>
+                <div class="text-[9px] tracking-widest text-muted font-bold mb-3 uppercase">HORARIOS</div>
+                <div id="program-schedules" class="flex flex-col gap-1.5 mb-6">
+                  <!-- Javascript will insert schedules here -->
+                </div>
+              </div>
+              <div>
+                <a href="#inscripcion" class="btn btn-red w-full text-center py-3 text-[10px] tracking-wider uppercase">Inscribirme →</a>
+                <p class="mt-2.5 text-[10px] text-muted italic text-center leading-none">Cupos limitados · 14 por aula</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── Academic Calendar Section (Calendario Académico) ── -->
+      <section id="calendario" class="bg-white border-t border-navy py-14 md:py-24">
+        <div class="wrap">
+          <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8 md:gap-12 items-start">
+            
+            <!-- Left Filter Panel -->
+            <div>
+              <p class="eyebrow">★ Calendario Académico</p>
+              <h2 class="section-h2 text-2xl md:text-4xl lg:text-5xl mb-4">Ciclo<br><span class="italic font-normal">Mayo — Julio</span></h2>
+              <p class="text-[13px] leading-relaxed text-ink mb-6 italic">Selecciona un mes y filtra por programa. Las inscripciones cierran 5 días antes del inicio.</p>
+              
+              <!-- Filter Buttons Grid -->
+              <div class="grid gap-1">
+                
+                <!-- All Filter -->
+                <button id="filter-btn-all" class="flex items-center gap-2.5 border border-navy/10 px-3.5 py-2.5 text-xs text-ink bg-cream border-navy text-left focus:outline-none font-medium">
+                  <span class="w-2 h-2 rounded-full flex-shrink-0 bg-navy filter-dot"></span>
+                  <span>Todos los programas</span>
+                </button>
+                
+                <!-- Kids Filter -->
+                <button id="filter-btn-kids" class="flex items-center gap-2.5 border border-black/10 px-3.5 py-2.5 text-xs text-ink bg-transparent text-left focus:outline-none font-medium">
+                  <span class="w-2 h-2 rounded-full flex-shrink-0 bg-red hidden filter-dot"></span>
+                  <span>Niños 6–11</span>
+                </button>
+                
+                <!-- Teens Filter -->
+                <button id="filter-btn-teens" class="flex items-center gap-2.5 border border-black/10 px-3.5 py-2.5 text-xs text-ink bg-transparent text-left focus:outline-none font-medium">
+                  <span class="w-2 h-2 rounded-full flex-shrink-0 bg-gold hidden filter-dot"></span>
+                  <span>Adolescentes 12–16</span>
+                </button>
+
+                <!-- Adults Filter -->
+                <button id="filter-btn-adults" class="flex items-center gap-2.5 border border-black/10 px-3.5 py-2.5 text-xs text-ink bg-transparent text-left focus:outline-none font-medium">
+                  <span class="w-2 h-2 rounded-full flex-shrink-0 bg-navy hidden filter-dot"></span>
+                  <span>Adultos 17+</span>
+                </button>
+
+              </div>
+              
+              <div class="mt-6 border-t border-navy/15 pt-4">
+                <a href="images/calendario-2026.jpg" target="_blank" class="btn btn-outline-navy block w-full text-center text-[10px] py-2.5 no-underline">Ver Calendario 2026 ↗</a>
+              </div>
+            </div>
+
+            <!-- Right Calendar List Panel -->
+            <div>
+              
+              <!-- Month Tabs Selector -->
+              <div class="flex border-b-2 border-navy">
+                
+                <!-- Mayo Tab -->
+                <button id="month-btn-mayo" class="flex-1 py-3 px-3 relative bg-navy text-white border-none font-playfair text-lg md:text-2xl font-bold italic focus:outline-none">
+                  Mayo
+                  <div class="absolute inset-x-0 top-0 h-[3px] bg-red month-accent-bar"></div>
+                </button>
+                
+                <!-- Junio Tab -->
+                <button id="month-btn-junio" class="flex-1 py-3 px-3 relative bg-transparent text-navy border-none font-playfair text-lg md:text-2xl font-bold italic focus:outline-none">
+                  Junio
+                  <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden month-accent-bar"></div>
+                </button>
+                
+                <!-- Julio Tab -->
+                <button id="month-btn-julio" class="flex-1 py-3 px-3 relative bg-transparent text-navy border-none font-playfair text-lg md:text-2xl font-bold italic focus:outline-none">
+                  Julio
+                  <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden month-accent-bar"></div>
+                </button>
+
+              </div>
+
+              <!-- List Container -->
+              <div id="calendar-items" class="border border-navy border-t-0 bg-white">
+                <!-- Javascript will render calendar items list here -->
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Agenda Section (Agenda Cultural America 250) ── -->
+      <section id="eventos" class="relative bg-navy text-white py-14 md:py-24 overflow-hidden border-b border-white/10">
+        
+        <!-- Star Overlay Pattern -->
+        <svg width="100%" height="100%" class="absolute inset-0 opacity-15 pointer-events-none" aria-hidden="true">
+          <defs>
+            <pattern id="eventsStars" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M30 18 L33 27 L42 27 L34.5 33 L37.5 42 L30 36.5 L22.5 42 L25.5 33 L18 27 L27 27 Z" fill="#fff"></path>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#eventsStars)"></rect>
+        </svg>
+
+        <div class="wrap relative">
+          
+          <!-- Section Title -->
+          <div class="text-center mb-10">
+            <p class="text-[9px] md:text-[10px] tracking-[4px] text-gold font-bold mb-2.5">★ ★ ★  AGENDA AMERICA 250  ★ ★ ★</p>
+            <h2 class="font-playfair text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-2">Un año de <span class="text-gold italic font-normal">celebraciones</span>.</h2>
+          </div>
+
+          <!-- Events Split Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-6">
+            
+            <!-- Left Side: Featured Showcase Card -->
+            <article class="relative overflow-hidden min-h-[380px] md:min-h-[420px] flex flex-col justify-between border border-white/15">
+              <div class="absolute inset-0 bg-gradient-to-tr from-red/95 via-red/55 to-red/10 mix-blend-multiply pointer-events-none z-0"></div>
+              <div class="absolute inset-0 bg-cover bg-center -z-10" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80')"></div>
+              
+              <div class="relative z-10 p-6 md:p-10 flex flex-col justify-between h-full min-h-[380px] md:min-h-[420px]">
+                
+                <!-- Event Meta Header -->
+                <div class="flex justify-between items-center gap-4">
+                  <span class="bg-white text-red px-3 py-1 text-[9px] tracking-widest font-bold">★ EVENTO ESTELAR</span>
+                  <span class="font-playfair text-base md:text-lg italic">04 JUL 2026</span>
+                </div>
+
+                <!-- Event Details Body -->
+                <div class="my-auto">
+                  <h3 class="font-playfair text-3xl md:text-5xl font-black leading-tight mb-3">Independence Day<br><span class="italic font-normal text-gold">The Big 250</span></h3>
+                  <p class="text-sm md:text-base leading-relaxed opacity-90 italic font-playfair max-w-md">
+                    Concierto, food trucks, fuegos artificiales y la ceremonia oficial con la Embajada de EE.UU.
+                  </p>
+                </div>
+
+                <!-- Event Footer details -->
+                <div class="flex flex-wrap gap-4 items-center border-t border-white/20 pt-4 mt-4">
+                  <span class="text-xs">📍 Patio CBA · Calle Calvo 301</span>
+                  <span class="text-xs opacity-75">🎟 Entrada libre · cupo limitado</span>
+                  <a href="#inscripcion" class="btn bg-white text-red ml-auto py-2.5 px-4 text-[9px] md:text-[10px] tracking-wider font-bold">Reservar →</a>
+                </div>
+
+              </div>
+            </article>
+
+            <!-- Right Side: Vertical List Cards -->
+            <div class="flex flex-col gap-3">
+              
+              <!-- Event Card 1 -->
+              <article class="bg-white/5 border border-white/10 p-5 flex flex-col gap-2 flex-grow">
+                <div class="flex justify-between items-center gap-4">
+                  <span class="bg-gold text-navy px-2 py-0.5 text-[8px] tracking-wider font-bold">EDUCATIONUSA</span>
+                  <span class="font-playfair text-xs md:text-sm italic opacity-70">22 MAY 2026</span>
+                </div>
+                <h4 class="font-playfair text-base md:text-lg font-bold text-white mt-1">Feria de Universidades Americanas</h4>
+                <p class="text-[12px] opacity-75 leading-relaxed mb-2">12 universidades de EE.UU. presentan programas, becas y proceso de admisión. Entrada libre.</p>
+                <div class="text-[11px] opacity-60 border-t border-white/10 pt-2 mt-auto">📍 Auditorio CBA</div>
+              </article>
+
+              <!-- Event Card 2 -->
+              <article class="bg-white/5 border border-white/10 p-5 flex flex-col gap-2 flex-grow">
+                <div class="flex justify-between items-center gap-4">
+                  <span class="bg-gold text-navy px-2 py-0.5 text-[8px] tracking-wider font-bold">CINE</span>
+                  <span class="font-playfair text-xs md:text-sm italic opacity-70">15 JUN 2026</span>
+                </div>
+                <h4 class="font-playfair text-base md:text-lg font-bold text-white mt-1">Festival de Cine Indie Americano</h4>
+                <p class="text-[12px] opacity-75 leading-relaxed mb-2">Una semana de cine independiente: Sundance hits, documentales y Q&A con directores invitados.</p>
+                <div class="text-[11px] opacity-60 border-t border-white/10 pt-2 mt-auto">📍 Sala de Cine CBA</div>
+              </article>
+
+              <!-- Event Card 3 -->
+              <article class="bg-white/5 border border-white/10 p-5 flex flex-col gap-2 flex-grow">
+                <div class="flex justify-between items-center gap-4">
+                  <span class="bg-gold text-navy px-2 py-0.5 text-[8px] tracking-wider font-bold">FULBRIGHT</span>
+                  <span class="font-playfair text-xs md:text-sm italic opacity-70">30 ABR 2026</span>
+                </div>
+                <h4 class="font-playfair text-base md:text-lg font-bold text-white mt-1">Información Becas Fulbright 2027</h4>
+                <p class="text-[12px] opacity-75 leading-relaxed mb-2">Conoce los requisitos para postular a la beca más prestigiosa del gobierno de EE.UU.</p>
+                <div class="text-[11px] opacity-60 border-t border-white/10 pt-2 mt-auto">📍 Sala 3 · 18:30</div>
+              </article>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Scholarships and EducationUSA Section (Becas) ── -->
+      <section id="becas" class="relative bg-slate-100 py-14 md:py-24 border-t border-b border-navy/15 overflow-hidden">
+        
+        <!-- Subtle University Campus Background Texture -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&q=80');"></div>
+        
+        <div class="wrap relative z-10">
+          
+          <!-- Section Title -->
+          <div class="text-center mb-12">
+            <p class="eyebrow">★ EducationUSA Advising · Becas</p>
+            <h2 class="section-h2 text-3xl md:text-5xl lg:text-6xl mb-3.5">Tu camino a una <span class="text-red italic font-normal">universidad</span> en EE.UU.</h2>
+            <p class="text-xs md:text-sm text-muted italic max-w-xl mx-auto leading-relaxed">
+              Centro oficial <strong class="text-navy">EducationUSA</strong>. Asesoría gratuita, exámenes internacionales y más de 120 ex-becarios Fulbright desde 1962.
+            </p>
+          </div>
+
+          <!-- Split Grids: Description vs. Stats -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center mb-14">
+            
+            <!-- Left Info Block -->
+            <div class="bg-white/90 backdrop-blur-sm border border-navy/10 p-6 md:p-8 shadow-sm">
+              <blockquote class="font-playfair text-base md:text-lg lg:text-xl italic text-ink leading-relaxed mb-6 pl-4 border-l-3 border-red">
+                "Estudiar en EE.UU. cambió mi forma de ver el mundo."
+                <footer class="text-[11px] italic text-muted mt-2 font-inter">— Andrea M. · Fulbright 2024 · Cornell University</footer>
+              </blockquote>
+              <p class="text-sm md:text-base leading-relaxed text-ink mb-6">
+                El CBA Sucre administra exámenes oficiales **TOEFL PBT & iBT**, **ECCE** y **ECPE** con material y personal especializado. Mantenemos lazos activos con **38 universidades aliadas** en EE.UU.
+              </p>
+              <div class="flex flex-wrap gap-2.5">
+                <a href="#inscripcion" class="btn btn-navy text-[10px] md:text-xs">Solicitar asesoría gratuita →</a>
+                <a href="#inscripcion" class="btn btn-outline-navy text-[10px] md:text-xs">Ver exámenes disponibles</a>
+              </div>
+            </div>
+
+            <!-- Right Stats Grid -->
+            <div class="grid grid-cols-2 gap-0 border border-navy bg-white shadow-sm select-none">
+              
+              <!-- Stat 1 -->
+              <div class="bg-red text-white p-6 border-r border-b border-white/20 min-h-[150px] flex flex-col justify-end relative">
+                <div class="absolute top-3 right-3 text-[9px] tracking-widest opacity-40 font-bold">01/04</div>
+                <div class="font-playfair text-4xl lg:text-5xl font-black italic leading-none mb-2">120+</div>
+                <div class="text-xs opacity-90 leading-tight">Becarios Fulbright desde 1962</div>
+              </div>
+
+              <!-- Stat 2 -->
+              <div class="bg-navy text-white p-6 border-b border-white/20 min-h-[150px] flex flex-col justify-end relative">
+                <div class="absolute top-3 right-3 text-[9px] tracking-widest opacity-40 font-bold">02/04</div>
+                <div class="font-playfair text-4xl lg:text-5xl font-black italic leading-none mb-2">38</div>
+                <div class="text-xs opacity-90 leading-tight">Universidades aliadas en EE.UU.</div>
+              </div>
+
+              <!-- Stat 3 -->
+              <div class="bg-navy text-white p-6 border-r border-white/20 min-h-[150px] flex flex-col justify-end relative">
+                <div class="absolute top-3 right-3 text-[9px] tracking-widest opacity-40 font-bold">03/04</div>
+                <div class="font-playfair text-4xl lg:text-5xl font-black italic leading-none mb-2">TOEFL</div>
+                <div class="text-xs opacity-90 leading-tight">Centro autorizado PBT & iBT</div>
+              </div>
+
+              <!-- Stat 4 -->
+              <div class="bg-red text-white p-6 min-h-[150px] flex flex-col justify-end relative">
+                <div class="absolute top-3 right-3 text-[9px] tracking-widest opacity-40 font-bold">04/04</div>
+                <div class="font-playfair text-4xl lg:text-5xl font-black italic leading-none mb-2">ECCE</div>
+                <div class="text-xs opacity-90 leading-tight">Exámenes Cambridge oficiales</div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="flex justify-center items-center gap-8 md:gap-12 flex-wrap py-6 mb-10 border-t border-b border-navy/12 bg-white/90 backdrop-blur-sm border border-navy/10 p-4 shadow-sm">
+            <span class="text-[10px] font-bold tracking-widest text-muted uppercase">Aliados y Programas Oficiales:</span>
+            <img src="logos/logo-american-spaces.png" alt="Logo American Spaces" class="h-9 object-contain opacity-95">
+            <img src="logos/logo-america250.png" alt="Logo America 250" class="h-9 object-contain opacity-95">
+            <img src="logos/us-embassy.jpg" alt="Logo Embajada de los Estados Unidos" class="h-9 object-contain opacity-95">
+            <img src="logos/logo-educationusa.svg" alt="Logo EducationUSA" class="h-9 object-contain opacity-95">
+            <span class="font-inter text-[13px] font-black text-red tracking-wider flex items-center h-9">ABLA</span>
+            <span class="font-inter text-[13px] font-black text-gold tracking-widest flex items-center h-9">FEBI</span>
+          </div>
+
+          <!-- Scholarships list cards -->
+          <div class="pt-6">
+            <p class="eyebrow text-center mb-2">★ Programas de Becas Disponibles</p>
+            <h3 class="font-playfair text-2xl md:text-3.5xl text-navy text-center mb-8 tracking-tight">Tres caminos hacia los <span class="italic font-normal">Estados Unidos</span></h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 border border-navy">
+              
+              <!-- Fulbright Beca -->
+              <div class="p-6 md:p-8 bg-white border-b md:border-b-0 md:border-r border-navy flex flex-col gap-3">
+                <span class="self-start bg-red text-white px-2 py-0.5 text-[8px] tracking-widest font-bold">BECA 01</span>
+                <h4 class="font-playfair text-base md:text-lg font-bold text-navy mt-1">Beca Fulbright</h4>
+                <p class="text-xs md:text-sm text-ink leading-relaxed mb-4">
+                  El programa de intercambio educativo más prestigioso del gobierno de los Estados Unidos. El CBA Sucre tiene más de 120 ex-becarios desde 1962.
+                </p>
+                <div class="mt-auto border-t border-navy/12 pt-3 text-[11.5px] text-muted italic">
+                  <strong class="text-navy font-medium not-italic">Requisitos:</strong> Título universitario, inglés avanzado, proyecto de estudio sólido.
+                </div>
+              </div>
+
+              <!-- JFK Beca -->
+              <div class="p-6 md:p-8 bg-white border-b md:border-b-0 md:border-r border-navy flex flex-col gap-3">
+                <span class="self-start bg-navy text-white px-2 py-0.5 text-[8px] tracking-widest font-bold">BECA 02</span>
+                <h4 class="font-playfair text-base md:text-lg font-bold text-navy mt-1">Beca John F. Kennedy</h4>
+                <p class="text-xs md:text-sm text-ink leading-relaxed mb-4">
+                  Beca ofrecida por la Embajada de los Estados Unidos para estudiantes bolivianos destacados de colegios fiscales.
+                </p>
+                <div class="mt-auto border-t border-navy/12 pt-3 text-[11.5px] text-muted italic">
+                  <strong class="text-navy font-medium not-italic">Requisitos:</strong> Estudiantes de colegios fiscales, alto rendimiento académico.
+                </div>
+              </div>
+
+              <!-- MLK Beca -->
+              <div class="p-6 md:p-8 bg-white flex flex-col gap-3">
+                <span class="self-start bg-navy text-white px-2 py-0.5 text-[8px] tracking-widest font-bold">BECA 03</span>
+                <h4 class="font-playfair text-base md:text-lg font-bold text-navy mt-1">Beca Martin Luther King</h4>
+                <p class="text-xs md:text-sm text-ink leading-relaxed mb-4">
+                  Beca de la Embajada estadounidense orientada a estudiantes de colegios fiscales con excelencia académica y liderazgo comunitario.
+                </p>
+                <div class="mt-auto border-t border-navy/12 pt-3 text-[11.5px] text-muted italic">
+                  <strong class="text-navy font-medium not-italic">Requisitos:</strong> Colegios fiscales, liderazgo y rendimiento académico comprobado.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── Pre-Inscription Form Section (Inscripción) ── -->
+      <section id="inscripcion" class="relative bg-white py-14 md:py-24 border-t border-b border-navy overflow-hidden">
+        
+        <!-- Subtle Learning Background Texture -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-[0.04] pointer-events-none" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1600&q=80');"></div>
+        
+        <div class="wrap relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 items-start">
+            
+            <!-- Left Panel: Inscripción Presencial -->
+            <div>
+              <p class="eyebrow">★ Inscripciones 2026</p>
+              <h2 class="section-h2 text-3xl md:text-5xl lg:text-6xl mb-4.5">Inscríbete de forma<br><span class="italic font-normal">presencial</span>.</h2>
+              <p class="text-sm md:text-base leading-relaxed text-ink mb-8">La mayor parte de nuestras inscripciones y evaluaciones se realizan en nuestras oficinas centrales. Visítanos para recibir asesoría personalizada sobre el nivel adecuado para ti o tus hijos.</p>
+              
+              <!-- Value propositions list -->
+              <div class="border-t border-navy/12 pt-6">
+                <div class="text-[9px] tracking-widest text-muted font-bold mb-4 uppercase">INFORMACIÓN DE INSCRIPCIÓN</div>
+                
+                <!-- Prop 1: Ubicación -->
+                <div class="flex gap-4 py-3 border-b border-navy/8">
+                  <svg class="w-5 h-5 text-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  <div>
+                    <div class="font-playfair text-sm md:text-base text-navy font-bold">Ubicación Central</div>
+                    <div class="text-xs text-muted mt-1">Calle Calvo #301 esq. Potosí, Sucre (Bolivia).</div>
+                  </div>
+                </div>
+
+                <!-- Prop 2: Requisitos -->
+                <div class="flex gap-4 py-3 border-b border-navy/8">
+                  <svg class="w-5 h-5 text-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                  </svg>
+                  <div>
+                    <div class="font-playfair text-sm md:text-base text-navy font-bold">Requisitos Mínimos</div>
+                    <div class="text-xs text-muted mt-1">Fotocopia de Cédula de Identidad del estudiante (y del tutor en caso de menores).</div>
+                  </div>
+                </div>
+
+                <!-- Prop 3: Horarios de Atención -->
+                <div class="flex gap-4 py-3">
+                  <svg class="w-5 h-5 text-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  <div>
+                    <div class="font-playfair text-sm md:text-base text-navy font-bold">Horarios de Oficina</div>
+                    <div class="text-xs text-muted mt-1">Lunes a Viernes: 08:30 – 12:00, 14:30 – 18:30. Sábados: 09:00 – 12:30.</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Right Panel: Interactive Form & WhatsApp Call-to-action -->
+            <div class="bg-cream border border-navy p-6 md:p-9 shadow-sm">
+              <div class="flex justify-between items-end border-b-2 border-navy pb-4 mb-6 gap-4">
+                <div class="font-playfair text-lg md:text-2xl font-bold italic text-navy">Consultas y Registro</div>
+                <div class="text-[9px] tracking-wider text-muted font-bold whitespace-nowrap">CICLO MAY–JUL 2026</div>
+              </div>
+              
+              <!-- Direct WhatsApp Button -->
+              <div class="mb-6">
+                <div class="text-[9px] tracking-widest text-muted font-bold mb-3 uppercase">★ CONTACTO DIRECTO EN LÍNEA</div>
+                <a href="https://wa.me/59162900082?text=Hola%20CBA%20Sucre,%20quisiera%20consultar%20sobre%20las%20inscripciones%20y%20cursos%20de%20ingl%C3%A9s." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 bg-green hover:bg-[#4d784c] text-white py-3.5 px-6 font-bold text-xs tracking-wider uppercase transition-colors no-underline select-none">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.004 2C6.51 2 2.014 6.5 2 12c0 1.892.518 3.73 1.504 5.334L2 22l4.828-1.266c1.55.844 3.297 1.284 5.176 1.284 5.5 0 9.996-4.5 10-10 0-2.668-1.04-5.176-2.93-7.07A9.919 9.919 0 0 0 12.004 2zm5.495 14.156c-.244.689-1.2 1.295-1.956 1.39-.53.067-1.22.096-1.97-.156-.5-.156-1.14-.4-1.97-.78-3.48-1.59-5.73-5.4-5.9-5.64-.178-.244-1.4-2.002-1.4-3.81 0-1.808.88-2.7 1.2-3.07.32-.37.7-.46.93-.46.24 0 .47.01.68.02.21.01.5-.04.78.69.29.74.97 2.53 1.05 2.72.08.19.14.4.02.66-.12.26-.18.41-.38.64-.19.24-.41.52-.58.71-.19.21-.4.42-.17.83.23.41 1 1.77 2.14 2.87 1.47 1.4 2.7 1.84 3.09 2.02.39.18.62.15.86-.11.24-.27 1-1.25 1.27-1.67.27-.42.53-.35.9-.19.37.15 2.34 1.19 2.44 1.25.1.06.28.18.34.3.07.13.07.74-.17 1.43z"/>
+                  </svg>
+                  <span>Chatear por WhatsApp</span>
+                </a>
+                <p class="mt-2 text-[10px] text-muted italic text-center">Atención inmediata en horarios de oficina · +591 62900082</p>
+              </div>
+
+              <!-- Divider -->
+              <div class="relative flex py-4 items-center">
+                <div class="flex-grow border-t border-navy/12"></div>
+                <span class="flex-shrink mx-4 text-[9px] tracking-widest text-muted font-bold uppercase">O déjanos una consulta</span>
+                <div class="flex-grow border-t border-navy/12"></div>
+              </div>
+
+              <!-- Simplified Form -->
+              <form id="inscription-form" class="flex flex-col gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Full Name -->
+                  <div>
+                    <label for="form-name" class="block text-[10px] tracking-wider font-bold text-navy uppercase mb-1.5">Nombre completo</label>
+                    <input id="form-name" type="text" placeholder="Ej. María Camila Rojas" class="block w-full px-3.5 py-2.5 bg-white border border-navy/18 text-xs text-ink placeholder-muted/60 rounded-none focus:outline-none focus:border-navy transition-colors font-inter" required>
+                  </div>
+
+                  <!-- WhatsApp Number -->
+                  <div>
+                    <label for="form-phone" class="block text-[10px] tracking-wider font-bold text-navy uppercase mb-1.5">WhatsApp / Celular</label>
+                    <input id="form-phone" type="tel" placeholder="Ej. 62900082" class="block w-full px-3.5 py-2.5 bg-white border border-navy/18 text-xs text-ink placeholder-muted/60 rounded-none focus:outline-none focus:border-navy transition-colors font-inter" required>
+                  </div>
+                </div>
+
+                <!-- Program Selection -->
+                <div>
+                  <div class="text-[9px] tracking-widest text-muted font-bold mb-3 uppercase">PROGRAMA DE INTERÉS</div>
+                  <div class="grid grid-cols-3 gap-2">
+                    <button id="form-prog-kids" class="flex flex-col items-center justify-center py-3.5 px-2 bg-white text-navy border border-navy/18 transition-all hover:bg-navy/5 focus:outline-none">
+                      <div class="font-playfair text-sm md:text-base font-bold italic leading-none">Niños</div>
+                      <div class="text-[9px] opacity-70 mt-1">6 – 11 años</div>
+                    </button>
+                    <button id="form-prog-teens" class="flex flex-col items-center justify-center py-3.5 px-2 bg-navy text-white border border-navy transition-all focus:outline-none">
+                      <div class="font-playfair text-sm md:text-base font-bold italic leading-none">Adolescentes</div>
+                      <div class="text-[9px] opacity-70 mt-1">12 – 16 años</div>
+                    </button>
+                    <button id="form-prog-adults" class="flex flex-col items-center justify-center py-3.5 px-2 bg-white text-navy border border-navy/18 transition-all hover:bg-navy/5 focus:outline-none">
+                      <div class="font-playfair text-sm md:text-base font-bold italic leading-none">Adultos</div>
+                      <div class="text-[9px] opacity-70 mt-1">17+ años</div>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="border-t border-navy/12 pt-4 flex flex-col gap-3">
+                  <button type="submit" class="btn btn-red w-full text-center py-3.5 text-xs tracking-widest uppercase font-bold">
+                    Enviar consulta por WhatsApp ★
+                  </button>
+                  <p class="text-[10px] text-muted italic text-center leading-relaxed">
+                    Al hacer clic, se abrirá WhatsApp con una plantilla pre-redactada con tu consulta para atención personalizada.
+                  </p>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── Footer (Contacto) ── -->
+    <footer id="contacto" class="bg-navy-deep text-white">
+      
+      <!-- Top Red Ribbon -->
+      <div class="h-1 bg-red border-t border-b border-red-deep"></div>
+
+      <!-- Main Footer Columns -->
+      <div class="wrap py-12 md:py-16">
+        
+        <!-- Branding header in Footer -->
+        <div class="text-center mb-10 pb-7 border-b border-white/12">
+          <div class="text-[9px] tracking-[5px] text-gold font-bold mb-1.5">★  EST. 1962  ★</div>
+          <div class="font-playfair text-2xl md:text-3.5xl font-black italic tracking-wide">The Bolivian–American</div>
+          <div class="font-playfair text-[11px] tracking-[6px] opacity-80 mt-1 uppercase">·  C · B · A  ·  S U C R E  ·</div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          
+          <!-- Column 1: About -->
+          <div>
+            <div class="text-[9px] tracking-widest text-gold font-bold mb-4 uppercase">QUIÉNES SOMOS</div>
+            <p class="text-[12.5px] leading-relaxed opacity-75 mb-5">
+              Institución cultural y educativa binacional. Centro oficial de asesoría de EducationUSA en Sucre. Acreditada por la Embajada de los EE.UU. en Bolivia.
+            </p>
+            
+            <!-- Social Networks Links with SVGs -->
+            <div class="flex gap-2">
+              <a href="https://www.facebook.com/cba.sucre" target="_blank" rel="noopener noreferrer" aria-label="Facebook de CBA Sucre" class="w-8.5 h-8.5 border border-white/15 rounded-full grid place-items-center text-white hover:text-gold hover:border-gold hover:bg-white/5 transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/cba.sucre/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-8.5 h-8.5 border border-white/15 rounded-full grid place-items-center text-white hover:text-gold hover:border-gold hover:bg-white/5 transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/c/cbasucre" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-8.5 h-8.5 border border-white/15 rounded-full grid place-items-center text-white hover:text-gold hover:border-gold hover:bg-white/5 transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11C4.483 20.455 12 20.455 12 20.455s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="w-8.5 h-8.5 border border-white/15 rounded-full grid place-items-center text-white hover:text-gold hover:border-gold hover:bg-white/5 transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="X (Twitter)" class="w-8.5 h-8.5 border border-white/15 rounded-full grid place-items-center text-white hover:text-gold hover:border-gold hover:bg-white/5 transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Visítanos with SVGs -->
+          <div>
+            <div class="text-[9px] tracking-widest text-gold font-bold mb-4 uppercase">VISÍTANOS</div>
+            <div class="flex gap-2.5 items-start mb-3">
+              <svg class="w-4.5 h-4.5 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+              </svg>
+              <div class="font-playfair text-[13.5px] leading-relaxed opacity-85 italic">
+                Calle Calvo #301 esq. Potosí<br>
+                Sucre &middot; Bolivia
+              </div>
+            </div>
+            <div class="flex gap-2.5 items-start mt-3.5 pl-7 border-l border-white/10">
+              <svg class="w-4 h-4 text-white/50 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <div class="text-[11.5px] leading-relaxed opacity-65">
+                Lun &ndash; Vie &middot; 8:00 &ndash; 20:00<br>
+                S&aacute;b &middot; 9:00 &ndash; 13:00
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Contacto with SVGs -->
+          <div>
+            <div class="text-[9px] tracking-widest text-gold font-bold mb-4 uppercase">CONTACTO</div>
+            <div class="flex flex-col gap-3">
+              <div class="flex gap-2.5 items-center">
+                <svg class="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.824-1.502-5.183-3.861-6.686-6.686l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+                <span class="text-[12.5px] font-mono opacity-85">+591 (4) 64-41608</span>
+              </div>
+              <div class="flex gap-2.5 items-center">
+                <svg class="w-4 h-4 text-gold flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                <span class="text-[12.5px] font-mono opacity-85">info@cbasucre.org</span>
+              </div>
+              <div class="flex gap-2.5 items-center">
+                <svg class="w-4 h-4 text-green flex-shrink-0 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.004 2C6.51 2 2.014 6.5 2 12c0 1.892.518 3.73 1.504 5.334L2 22l4.828-1.266c1.55.844 3.297 1.284 5.176 1.284 5.5 0 9.996-4.5 10-10 0-2.668-1.04-5.176-2.93-7.07A9.919 9.919 0 0 0 12.004 2zm5.495 14.156c-.244.689-1.2 1.295-1.956 1.39-.53.067-1.22.096-1.97-.156-.5-.156-1.14-.4-1.97-.78-3.48-1.59-5.73-5.4-5.9-5.64-.178-.244-1.4-2.002-1.4-3.81 0-1.808.88-2.7 1.2-3.07.32-.37.7-.46.93-.46.24 0 .47.01.68.02.21.01.5-.04.78.69.29.74.97 2.53 1.05 2.72.08.19.14.4.02.66-.12.26-.18.41-.38.64-.19.24-.41.52-.58.71-.19.21-.4.42-.17.83.23.41 1 1.77 2.14 2.87 1.47 1.4 2.7 1.84 3.09 2.02.39.18.62.15.86-.11.24-.27 1-1.25 1.27-1.67.27-.42.53-.35.9-.19.37.15 2.34 1.19 2.44 1.25.1.06.28.18.34.3.07.13.07.74-.17 1.43z"/>
+                </svg>
+                <span class="text-[12.5px] font-mono opacity-85">+591 62900082</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 4: Links -->
+          <div>
+            <div class="text-[9px] tracking-widest text-gold font-bold mb-4 uppercase">ENLACES RÁPIDOS</div>
+            <div class="flex flex-col gap-2">
+              <a href="https://sistema-academico.cbasucre.org" target="_blank" class="text-xs opacity-75 text-white no-underline hover:underline">Sistema académico</a>
+              <a href="#inscripcion" class="text-xs opacity-75 text-white no-underline hover:underline">Bolsa de trabajo</a>
+              <a href="#inscripcion" class="text-xs opacity-75 text-white no-underline hover:underline">Voluntariado USA</a>
+              <a href="#inscripcion" class="text-xs opacity-75 text-white no-underline hover:underline">Biblioteca digital</a>
+              <a href="#inscripcion" class="text-xs opacity-75 text-white no-underline hover:underline">Reglamento interno</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Copyright Footer Ribbon -->
+      <div class="border-t border-white/8 py-4 px-6 md:px-12 flex justify-between flex-wrap gap-2 text-[10.5px] opacity-55 italic tracking-wide select-none">
+        <span>© 2026 Centro Boliviano Americano · Sucre · Todos los derechos reservados</span>
+        <span>Diseñado en Sucre · Edición especial America 250</span>
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro Boliviano Americano · Sucre</title>
+  <meta name="description" content="Tendiendo puentes entre culturas desde 1962. Programas de inglés, EducationUSA, Fulbright y eventos America 250 en Sucre, Bolivia." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     HEADER
+     ═══════════════════════════════ -->
+<header id="site-header">
+  <div class="wrap header-inner">
+    <!-- Logo -->
+    <a href="#" class="header-logo">
+      <img id="header-logo-img" src="logos/logo-cba.png" alt="CBA Logo" class="logo-img" />
+      <div id="header-logo-fallback" class="logo-fallback">C</div>
+      <div>
+        <div class="logo-text-main">Centro Boliviano Americano</div>
+        <div class="logo-text-sub">Sucre · Bolivia · Est. 1962</div>
+      </div>
+    </a>
+
+    <!-- Nav -->
+    <nav class="header-nav">
+      <a href="#">Inicio</a>
+      <a href="#nosotros">Quiénes Somos</a>
+      <a href="#programas">Programas</a>
+      <a href="#calendario">Calendario</a>
+      <a href="#becas">Becas</a>
+      <a href="#usa250">USA 250</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- CTAs -->
+    <div class="header-ctas">
+      <a href="https://sistema-academico.cbasucre.org" target="_blank" rel="noopener noreferrer" class="btn btn-sys">Sistema académico</a>
+      <a href="#inscripcion" class="btn btn-enroll">Inscríbete</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════
+     ANNOUNCEMENT
+     ═══════════════════════════════ -->
+<div id="announcement">
+  <div class="wrap announce-inner">
+    <div class="announce-text">
+      <span class="announce-badge">NUEVO</span>
+      Inscripciones abiertas para el ciclo <strong>Mayo – Julio 2026</strong>. Niveles disponibles para todas las edades.
+    </div>
+    <a href="#inscripcion" class="announce-link">Inscribirme →</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     HERO
+     ═══════════════════════════════ -->
+<section id="usa250">
+  <!-- Stars background -->
+  <svg class="hero-stars" aria-hidden="true">
+    <defs>
+      <pattern id="heroStars" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M30 18 L33 27 L42 27 L34.5 33 L37.5 42 L30 36.5 L22.5 42 L25.5 33 L18 27 L27 27 Z" fill="#fff"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#heroStars)"/>
+  </svg>
+
+  <!-- Stripe -->
+  <div class="hero-stripe">
+    <div class="stripe-red"></div>
+    <div class="stripe-white"></div>
+    <div class="stripe-red"></div>
+  </div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-grid">
+      <!-- Left -->
+      <div>
+        <div class="hero-tag">★ EDICIÓN ESPECIAL · 2026</div>
+        <h1 class="hero-h1">America<br /><span>two-fifty</span></h1>
+        <p class="hero-blurb">Un año entero de conciertos, exhibiciones, conferencias y la fiesta de la independencia más grande de Chuquisaca. Bienvenidos al sesquicentenario del bicentenario.</p>
+        <div class="hero-btns">
+          <a href="#eventos" class="btn btn-red" style="font-size:11px">Ver agenda America 250 →</a>
+          <a href="#inscripcion" class="btn btn-ghost" style="font-size:11px">Inscríbete a clases</a>
+        </div>
+      </div>
+
+      <!-- Right: Countdown -->
+      <div class="countdown-wrap">
+        <!-- Medallion -->
+        <div class="countdown-medallion">
+          <div class="med-top">1776</div>
+          <div class="med-num">250</div>
+          <div class="med-bot">2026</div>
+        </div>
+        <!-- Box -->
+        <div class="countdown-box">
+          <div class="cd-label">⎯ COUNTDOWN ⎯</div>
+          <div class="cd-subtitle">Independence Day · 4 de julio, 2026</div>
+          <div class="cd-grid">
+            <div class="cd-cell"><div id="cd-d" class="cd-num">--</div><div class="cd-unit">DÍAS</div></div>
+            <div class="cd-cell"><div id="cd-h" class="cd-num">--</div><div class="cd-unit">HRS</div></div>
+            <div class="cd-cell"><div id="cd-m" class="cd-num">--</div><div class="cd-unit">MIN</div></div>
+            <div class="cd-cell"><div id="cd-s" class="cd-num">--</div><div class="cd-unit">SEG</div></div>
+          </div>
+          <div class="cd-foot">Junto a la Embajada de los Estados Unidos en Bolivia y el Departamento de Estado de EE.UU.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     QUIÉNES SOMOS
+     ═══════════════════════════════ -->
+<section id="nosotros" style="background:#F5EFE0; padding:clamp(50px,6vw,90px) 0;">
+  <div class="wrap">
+    <div style="text-align:center; margin-bottom:50px;">
+      <p class="eyebrow">★ ★ ★&nbsp; Quiénes Somos &nbsp;★ ★ ★</p>
+      <h2 class="section-h2" style="font-size:clamp(32px,5vw,68px);">Más de <em>60 años</em> tendiendo puentes.</h2>
+    </div>
+
+    <div class="about-grid">
+      <!-- Misión -->
+      <div>
+        <div class="about-mision-label">MISIÓN INSTITUCIONAL</div>
+        <blockquote class="about-blockquote">
+          "Proporcionar educación de alto nivel en idioma inglés sin ninguna discriminación, utilizando metodología actualizada y tecnología moderna con un enfoque humanista centrado en el estudiante."
+        </blockquote>
+        <p style="font-size:14px; line-height:1.75; color:#1A1A1A;">
+          Somos una <strong>Fundación Educativa y Cultural</strong> sin fines de lucro, reconocida por el Ministerio de Educación de Bolivia. Promovemos el intercambio académico y cultural entre Bolivia, los Estados Unidos y otros países.
+        </p>
+      </div>
+
+      <!-- Pilares -->
+      <div>
+        <div class="about-mision-label">PILARES FUNDAMENTALES</div>
+        <div class="pillar-wrap">
+          <div class="pillar">
+            <div class="pillar-num">01</div>
+            <div class="pillar-body">
+              <div class="pillar-title">Educación sin discriminación</div>
+              <div class="pillar-desc">Enseñanza de inglés, español y quechua sin restricción de edad, con metodología actualizada y tecnología moderna.</div>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">02</div>
+            <div class="pillar-body">
+              <div class="pillar-title">Intercambio cultural</div>
+              <div class="pillar-desc">Actividades culturales e intercambio bilateral entre Bolivia y los Estados Unidos.</div>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">03</div>
+            <div class="pillar-body">
+              <div class="pillar-title">Asesoría y exámenes</div>
+              <div class="pillar-desc">Asesoría educativa universitaria y administración de exámenes TOEFL, ECCE y ECPE.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline-wrap">
+      <p class="eyebrow" style="text-align:center; margin-bottom:36px;">★ ★ ★&nbsp; Historia &nbsp;★ ★ ★</p>
+      <div class="timeline-line-area">
+        <div class="timeline-line" style="top:36px;"></div>
+        <div class="timeline-line" style="top:39px;"></div>
+        <div class="timeline-grid">
+          <div class="milestone"><div class="milestone-dot"></div><div class="milestone-year">1962</div><div class="milestone-label">Fundación</div><div class="milestone-desc">Nace el CBA Sucre con apoyo de la Embajada de EE.UU.</div></div>
+          <div class="milestone"><div class="milestone-dot"></div><div class="milestone-year">1985</div><div class="milestone-label">Kinder bilingüe</div><div class="milestone-desc">Primer programa pre-escolar bilingüe de Chuquisaca.</div></div>
+          <div class="milestone"><div class="milestone-dot"></div><div class="milestone-year">1998</div><div class="milestone-label">Acreditación</div><div class="milestone-desc">Centro examinador oficial Cambridge, TOEFL, ECCE y ECPE.</div></div>
+          <div class="milestone"><div class="milestone-dot"></div><div class="milestone-year">2007</div><div class="milestone-label">Resolución Ministerial</div><div class="milestone-desc">Acreditación Nº 281/07 — Enseñanza Técnico Medio.</div></div>
+          <div class="milestone"><div class="milestone-dot"></div><div class="milestone-year">2010</div><div class="milestone-label">EducationUSA</div><div class="milestone-desc">Centro oficial de asesoría para universidades de EE.UU.</div></div>
+          <div class="milestone"><div class="milestone-dot active"></div><div class="milestone-year">2026</div><div class="milestone-label">America 250</div><div class="milestone-desc">Sede oficial de la celebración del sesquicentenario.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     PROGRAMAS
+     ═══════════════════════════════ -->
+<section id="programas">
+  <div class="wrap">
+    <div style="text-align:center; margin-bottom:44px;">
+      <p class="eyebrow">★ ★ ★&nbsp; Programas de Inglés &nbsp;★ ★ ★</p>
+      <h2 class="section-h2" style="font-size:clamp(38px,5.5vw,72px); margin-bottom:14px;">Una clase para <em>cada</em> edad.</h2>
+      <p style="font-size:14px; color:#5B6470; font-style:italic; max-width:520px; margin:0 auto; line-height:1.65;">Docentes certificados por el Departamento de Estado de EE.UU. · Currícula Cambridge &amp; marco común europeo.</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="prog-tabs">
+      <button class="prog-tab" data-prog="kids">
+        <div class="prog-tab-indicator"></div>
+        <div class="prog-tab-level">NIVEL · 01</div>
+        <div class="prog-tab-name">Niños</div>
+        <div class="prog-tab-age">7 – 11 años</div>
+        <div class="prog-tab-sep"></div>
+        <div class="prog-tab-dur">Múltiples niveles</div>
+      </button>
+      <button class="prog-tab active" data-prog="teens">
+        <div class="prog-tab-indicator"></div>
+        <div class="prog-tab-level">NIVEL · 02</div>
+        <div class="prog-tab-name">Adolescentes</div>
+        <div class="prog-tab-age">12 – 14 años</div>
+        <div class="prog-tab-sep"></div>
+        <div class="prog-tab-dur">Múltiples niveles</div>
+      </button>
+      <button class="prog-tab" data-prog="adults">
+        <div class="prog-tab-indicator"></div>
+        <div class="prog-tab-level">NIVEL · 03</div>
+        <div class="prog-tab-name">Jóvenes y Adultos</div>
+        <div class="prog-tab-age">15+ años</div>
+        <div class="prog-tab-sep"></div>
+        <div class="prog-tab-dur">Múltiples niveles</div>
+      </button>
+    </div>
+
+    <!-- Panels -->
+    <div class="prog-panels">
+      <!-- Kids panel -->
+      <div id="panel-kids" class="prog-panel">
+        <div class="prog-photo"><div class="prog-photo-overlay"></div><div class="prog-photo-label"></div></div>
+        <div class="prog-content">
+          <p class="prog-blurb"></p>
+          <div class="prog-bullets"></div>
+          <div class="prog-levels"></div>
+        </div>
+        <div class="prog-schedules">
+          <div class="sched-label">HORARIOS</div>
+          <div class="sched-list"></div>
+          <button class="btn btn-red" style="width:100%; text-align:center; padding:12px 16px; font-size:10px;">Inscribirme →</button>
+          <p class="sched-note">Cupos limitados · 14 por aula</p>
+        </div>
+      </div>
+      <!-- Teens panel -->
+      <div id="panel-teens" class="prog-panel active">
+        <div class="prog-photo"><div class="prog-photo-overlay"></div><div class="prog-photo-label"></div></div>
+        <div class="prog-content">
+          <p class="prog-blurb"></p>
+          <div class="prog-bullets"></div>
+          <div class="prog-levels"></div>
+        </div>
+        <div class="prog-schedules">
+          <div class="sched-label">HORARIOS</div>
+          <div class="sched-list"></div>
+          <button class="btn btn-red" style="width:100%; text-align:center; padding:12px 16px; font-size:10px;">Inscribirme →</button>
+          <p class="sched-note">Cupos limitados · 14 por aula</p>
+        </div>
+      </div>
+      <!-- Adults panel -->
+      <div id="panel-adults" class="prog-panel">
+        <div class="prog-photo"><div class="prog-photo-overlay"></div><div class="prog-photo-label"></div></div>
+        <div class="prog-content">
+          <p class="prog-blurb"></p>
+          <div class="prog-bullets"></div>
+          <div class="prog-levels"></div>
+        </div>
+        <div class="prog-schedules">
+          <div class="sched-label">HORARIOS</div>
+          <div class="sched-list"></div>
+          <button class="btn btn-red" style="width:100%; text-align:center; padding:12px 16px; font-size:10px;">Inscribirme →</button>
+          <p class="sched-note">Cupos limitados · 14 por aula</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     CALENDARIO ACADÉMICO
+     ═══════════════════════════════ -->
+<section id="calendario">
+  <div class="wrap">
+    <div class="cal-grid">
+      <!-- Sidebar filters -->
+      <div>
+        <p class="eyebrow">★ Calendario Académico</p>
+        <h2 class="section-h2" style="font-size:clamp(28px,4vw,52px); margin-bottom:16px;">Ciclo<br /><em>Mayo — Julio</em></h2>
+        <p style="font-size:13.5px; line-height:1.65; color:#1A1A1A; margin-bottom:22px; font-style:italic;">Selecciona un mes y filtra por programa. Las inscripciones cierran 5 días antes del inicio.</p>
+
+        <div class="cal-filters">
+          <button class="cal-filter-btn active" data-filter="Todos"><span class="cal-dot" style="background:#0A2540;"></span>Todos los programas</button>
+          <button class="cal-filter-btn" data-filter="kids"><span class="cal-dot" style="background:#B22234;"></span>Niños 6–11</button>
+          <button class="cal-filter-btn" data-filter="teens"><span class="cal-dot" style="background:#C9A961;"></span>Adolescentes 12–16</button>
+          <button class="cal-filter-btn" data-filter="adults"><span class="cal-dot" style="background:#0A2540;"></span>Adultos 17+</button>
+          <button class="cal-filter-btn" data-filter="special"><span class="cal-dot" style="background:#5B8C5A;"></span>Eventos y Cultura</button>
+        </div>
+
+        <div class="cal-view-btn-wrap">
+          <button id="cal-open-modal" class="btn btn-outline-navy" style="width:100%; text-align:center; font-size:10px; padding:10px 14px;">Ver Calendario 2026 ↗</button>
+        </div>
+      </div>
+
+      <!-- Events panel -->
+      <div>
+        <div class="cal-month-tabs">
+          <button class="cal-month-btn active" data-month="Mayo"><div class="cal-month-indicator"></div>Mayo</button>
+          <button class="cal-month-btn" data-month="Junio"><div class="cal-month-indicator"></div>Junio</button>
+          <button class="cal-month-btn" data-month="Julio"><div class="cal-month-indicator"></div>Julio</button>
+        </div>
+        <div class="cal-events">
+          <div id="cal-events-list"></div>
+          <div id="cal-empty" class="cal-empty">No hay eventos para este filtro en este mes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Calendar Modal -->
+<div id="cal-modal" role="dialog" aria-modal="true" aria-label="Calendario Académico 2026">
+  <div class="cal-modal-inner">
+    <button id="cal-modal-close" class="cal-modal-close" aria-label="Cerrar">✕</button>
+    <img src="images/calendario-2026.jpg" alt="Calendario Académico 2026" style="display:block; max-width:100%; height:auto;" />
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     AGENDA AMERICA 250
+     ═══════════════════════════════ -->
+<section id="eventos">
+  <svg style="position:absolute;inset:0;opacity:0.14;pointer-events:none;width:100%;height:100%;" aria-hidden="true">
+    <defs><pattern id="evStars" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M30 18 L33 27 L42 27 L34.5 33 L37.5 42 L30 36.5 L22.5 42 L25.5 33 L18 27 L27 27 Z" fill="#fff"/></pattern></defs>
+    <rect width="100%" height="100%" fill="url(#evStars)"/>
+  </svg>
+
+  <div class="wrap" style="position:relative;">
+    <div style="text-align:center; margin-bottom:44px;">
+      <p style="font-size:10px; letter-spacing:4px; color:#C9A961; font-weight:700; margin:0 0 10px;">★ ★ ★&nbsp; AGENDA AMERICA 250 &nbsp;★ ★ ★</p>
+      <h2 style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(32px,5vw,68px); margin:0; letter-spacing:-1.5px; line-height:1.05;">Un año de <em style="color:#C9A961;">celebraciones</em>.</h2>
+    </div>
+
+    <div class="events-grid">
+      <!-- Featured -->
+      <article class="event-featured">
+        <div class="event-featured-bg"></div>
+        <div class="event-featured-inner">
+          <div class="event-feat-head">
+            <span class="event-star-badge">★ EVENTO ESTELAR</span>
+            <span class="event-feat-date">04 JUL 2026</span>
+          </div>
+          <div class="event-feat-body">
+            <h3 class="event-feat-title">Independence Day<br /><em>The Big 250</em></h3>
+            <p class="event-feat-desc">Concierto, food trucks, fuegos artificiales y la ceremonia oficial con la Embajada de EE.UU.</p>
+          </div>
+          <div class="event-feat-foot">
+            <span>📍 Patio CBA · Calle Calvo 301</span>
+            <span style="opacity:0.8;">🎟 Entrada libre · cupo limitado</span>
+            <button class="btn" style="margin-left:auto; background:#fff; color:#B22234; padding:10px 20px; font-size:10px;">Reservar →</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <div class="event-sidebar">
+        <article class="event-card">
+          <div class="event-card-head">
+            <span class="event-tag-badge">EDUCATIONUSA</span>
+            <span class="event-card-date">22 MAY 2026</span>
+          </div>
+          <h4 class="event-card-title">Feria de Universidades Americanas</h4>
+          <p class="event-card-desc">12 universidades de EE.UU. presentan programas, becas y proceso de admisión. Entrada libre.</p>
+          <div class="event-card-place">📍 Auditorio CBA</div>
+        </article>
+        <article class="event-card">
+          <div class="event-card-head">
+            <span class="event-tag-badge">CINE</span>
+            <span class="event-card-date">15 JUN 2026</span>
+          </div>
+          <h4 class="event-card-title">Festival de Cine Indie Americano</h4>
+          <p class="event-card-desc">Una semana de cine independiente: Sundance hits, documentales y Q&amp;A con directores invitados.</p>
+          <div class="event-card-place">📍 Sala de Cine CBA</div>
+        </article>
+        <article class="event-card">
+          <div class="event-card-head">
+            <span class="event-tag-badge">FULBRIGHT</span>
+            <span class="event-card-date">30 ABR 2026</span>
+          </div>
+          <h4 class="event-card-title">Información Becas Fulbright 2027</h4>
+          <p class="event-card-desc">Conoce los requisitos para postular a la beca más prestigiosa del gobierno de EE.UU.</p>
+          <div class="event-card-place">📍 Sala 3 · 18:30</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     BECAS FULBRIGHT
+     ═══════════════════════════════ -->
+<section id="becas">
+  <div class="wrap">
+    <div style="text-align:center; margin-bottom:50px;">
+      <p class="eyebrow">★ EducationUSA Advising · Becas</p>
+      <h2 class="section-h2" style="font-size:clamp(32px,5vw,62px); margin-bottom:14px;">Tu camino a una <em style="color:#B22234;">universidad</em> en EE.UU.</h2>
+      <p style="font-size:14.5px; color:#5B6470; font-style:italic; max-width:580px; margin:0 auto; line-height:1.65;">Centro oficial <strong style="color:#0A2540;">EducationUSA</strong>. Asesoría gratuita, exámenes internacionales y más de 120 ex-becarios Fulbright desde 1962.</p>
+    </div>
+
+    <div class="becas-pitch-grid">
+      <div>
+        <blockquote class="becas-quote">
+          "Estudiar en EE.UU. cambió mi forma de ver el mundo."
+          <footer>— Andrea M. · Fulbright 2024 · Cornell University</footer>
+        </blockquote>
+        <p style="font-size:14px; line-height:1.75; color:#1A1A1A; margin-bottom:24px;">
+          El CBA Sucre administra exámenes <strong>TOEFL PBT &amp; iBT</strong>, <strong>ECCE</strong> y <strong>ECPE</strong> con material y personal especializado. Lazos activos con <strong>38 universidades aliadas</strong> en EE.UU.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-navy" style="font-size:11px;">Solicitar asesoría gratuita →</button>
+          <button class="btn btn-outline-navy" style="font-size:11px;">Ver exámenes disponibles</button>
+        </div>
+      </div>
+
+      <!-- Stats 2×2 -->
+      <div class="stats-grid">
+        <div class="stat-cell" style="background:#B22234;">
+          <div class="stat-cell-num-label">01/04</div>
+          <div class="stat-num">120+</div>
+          <div class="stat-label">Becarios Fulbright desde 1962</div>
+        </div>
+        <div class="stat-cell" style="background:#0A2540;">
+          <div class="stat-cell-num-label">02/04</div>
+          <div class="stat-num">38</div>
+          <div class="stat-label">Universidades aliadas en EE.UU.</div>
+        </div>
+        <div class="stat-cell" style="background:#0A2540;">
+          <div class="stat-cell-num-label">03/04</div>
+          <div class="stat-num">TOEFL</div>
+          <div class="stat-label">Centro autorizado PBT &amp; iBT</div>
+        </div>
+        <div class="stat-cell" style="background:#B22234;">
+          <div class="stat-cell-num-label">04/04</div>
+          <div class="stat-num">ECCE</div>
+          <div class="stat-label">Exámenes Cambridge oficiales</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partners -->
+    <div class="partners-bar">
+      <span class="partners-label">Aliados y Programas Oficiales:</span>
+      <img src="logos/logo-american-spaces.png" alt="American Spaces" class="partner-logo" onerror="this.style.display='none'" />
+      <img src="logos/logo-america250.png" alt="America 250" class="partner-logo" onerror="this.style.display='none'" />
+      <span class="partner-text-edu">EducationUSA</span>
+      <span class="partner-text-abla">ABLA</span>
+      <span class="partner-text-febi">FEBI</span>
+    </div>
+
+    <!-- 3 Becas -->
+    <div style="padding-top:12px;">
+      <p class="eyebrow" style="text-align:center; margin-bottom:8px;">★ Programas de Becas Disponibles</p>
+      <h3 style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#0A2540; text-align:center; margin:0 0 36px; letter-spacing:-1px;">Tres caminos hacia los <em>Estados Unidos</em></h3>
+      <div class="becas-cards">
+        <div class="beca-card">
+          <span class="beca-label" style="background:#B22234;">BECA 01</span>
+          <h4 class="beca-title">Beca Fulbright</h4>
+          <p class="beca-desc">El programa de intercambio educativo más prestigioso del gobierno de los Estados Unidos. El CBA Sucre tiene más de 120 ex-becarios desde 1962.</p>
+          <div class="beca-reqs"><strong>Requisitos:</strong> Título universitario, inglés avanzado, proyecto de estudio sólido</div>
+        </div>
+        <div class="beca-card">
+          <span class="beca-label" style="background:#0A2540;">BECA 02</span>
+          <h4 class="beca-title">Beca John F. Kennedy</h4>
+          <p class="beca-desc">Beca ofrecida por la Embajada de los Estados Unidos para estudiantes bolivianos destacados de colegios fiscales.</p>
+          <div class="beca-reqs"><strong>Requisitos:</strong> Estudiantes de colegios fiscales, alto rendimiento académico</div>
+        </div>
+        <div class="beca-card">
+          <span class="beca-label" style="background:#0A2540;">BECA 03</span>
+          <h4 class="beca-title">Beca Martin Luther King</h4>
+          <p class="beca-desc">Beca de la Embajada estadounidense orientada a estudiantes de colegios fiscales con excelencia académica y liderazgo comunitario.</p>
+          <div class="beca-reqs"><strong>Requisitos:</strong> Colegios fiscales, liderazgo y rendimiento académico comprobado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     INSCRIPCIÓN
+     ═══════════════════════════════ -->
+<section id="inscripcion">
+  <div class="wrap">
+    <div class="form-grid">
+      <!-- Pitch -->
+      <div>
+        <p class="eyebrow">★ Pre-inscripción en línea</p>
+        <h2 class="section-h2" style="font-size:clamp(30px,4.5vw,56px); margin-bottom:18px;">Reserva tu cupo<br /><em>en minutos</em>.</h2>
+        <p style="font-size:14.5px; line-height:1.75; color:#1A1A1A; margin-bottom:28px;">Completa el formulario y te contactaremos en menos de 24 horas para confirmar horario y pago.</p>
+        <div class="form-why-list">
+          <div class="form-why-label">POR QUÉ EL CBA</div>
+          <div class="form-why-item"><span class="form-why-star">★</span><div><div class="form-why-t">Docentes certificados</div><div class="form-why-d">Por el Departamento de Estado de EE.UU.</div></div></div>
+          <div class="form-why-item"><span class="form-why-star">★</span><div><div class="form-why-t">Currícula Cambridge</div><div class="form-why-d">Niveles A1–C2 reconocidos internacionalmente</div></div></div>
+          <div class="form-why-item"><span class="form-why-star">★</span><div><div class="form-why-t">Centro examinador oficial</div><div class="form-why-d">TOEFL iBT · IELTS · Cambridge YLE/KET/PET/FCE</div></div></div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-box">
+        <div class="form-header">
+          <div class="form-title">Formulario de inscripción</div>
+          <div class="form-cycle">CICLO MAY–JUL 2026</div>
+        </div>
+
+        <form id="inscription-form" novalidate>
+          <div class="form-section-label">★ 1. DATOS PERSONALES</div>
+          <div class="form-fields">
+            <div class="form-field"><label for="fi-name">Nombre completo</label><input id="fi-name" type="text" placeholder="María Camila Rojas" /></div>
+            <div class="form-field"><label for="fi-dob">Fecha de nacimiento</label><input id="fi-dob" type="text" placeholder="DD / MM / AAAA" /></div>
+            <div class="form-field"><label for="fi-email">Correo electrónico</label><input id="fi-email" type="email" placeholder="tu@email.com" /></div>
+            <div class="form-field"><label for="fi-phone">Celular / WhatsApp</label><input id="fi-phone" type="tel" placeholder="+591 7..." /></div>
+          </div>
+
+          <div class="form-section-label" style="margin-bottom:10px;">★ 2. ELIGE PROGRAMA</div>
+          <div class="prog-selector">
+            <button class="prog-sel-btn" type="button" data-prog="kids"><div class="prog-sel-name">Niños</div><div class="prog-sel-age">7 – 11 años</div></button>
+            <button class="prog-sel-btn active" type="button" data-prog="teens"><div class="prog-sel-name">Adolescentes</div><div class="prog-sel-age">12 – 14 años</div></button>
+            <button class="prog-sel-btn" type="button" data-prog="adults"><div class="prog-sel-name">Jóvenes y Adultos</div><div class="prog-sel-age">15+ años</div></button>
+          </div>
+
+          <div class="form-bottom-grid" style="margin-top:14px;">
+            <div>
+              <div class="form-section-label">★ 3. HORARIO PREFERIDO</div>
+              <div id="form-sched-list" class="sched-options"></div>
+            </div>
+            <div>
+              <div class="form-section-label">MODALIDAD</div>
+              <div class="mode-options">
+                <button class="mode-btn active" type="button">Presencial</button>
+                <button class="mode-btn" type="button">Híbrido</button>
+                <button class="mode-btn" type="button">En línea</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <p class="form-disclaimer">Al enviar aceptas nuestros términos. Te contactaremos en menos de <strong>24 horas</strong>.</p>
+            <button type="submit" class="btn btn-red" style="white-space:nowrap; padding:13px 26px; font-size:11px;">Enviar inscripción ★</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+     FOOTER
+     ═══════════════════════════════ -->
+<footer id="footer" id="contacto">
+  <div class="wrap">
+    <div class="footer-top">
+      <!-- Brand -->
+      <div>
+        <div style="font-family:'Playfair Display',Georgia,serif; font-size:20px; font-weight:700; font-style:italic;">Centro Boliviano Americano</div>
+        <p class="footer-brand-tagline">Tendiendo puentes entre culturas desde 1962. Educación de excelencia, intercambio cultural y becas para Bolivia.</p>
+        <address class="footer-address" style="font-style:normal;">
+          Calle Calvo #301 esq. Potosí<br />
+          Sucre, Bolivia<br />
+          +591 (4) 644 1608<br />
+          info@cbasucre.org<br />
+          Lun – Vie · 8:00 – 20:00 · Sáb · 9:00 – 13:00
+        </address>
+      </div>
+
+      <!-- Links 1 -->
+      <div>
+        <div class="footer-col-title">SECCIONES</div>
+        <nav class="footer-links">
+          <a href="#nosotros">Quiénes Somos</a>
+          <a href="#programas">Programas de Inglés</a>
+          <a href="#calendario">Calendario Académico</a>
+          <a href="#becas">Becas &amp; EducationUSA</a>
+          <a href="#eventos">Agenda America 250</a>
+          <a href="#inscripcion">Pre-inscripción</a>
+        </nav>
+      </div>
+
+      <!-- Links 2 -->
+      <div>
+        <div class="footer-col-title">EXÁMENES OFICIALES</div>
+        <nav class="footer-links">
+          <a href="#">TOEFL PBT &amp; iBT</a>
+          <a href="#">Cambridge YLE / KET / PET</a>
+          <a href="#">FCE / CAE / CPE</a>
+          <a href="#">ECCE &amp; ECPE</a>
+          <a href="#">IELTS</a>
+        </nav>
+        <div class="footer-col-title" style="margin-top:24px;">REDES SOCIALES</div>
+        <nav class="footer-links">
+          <a href="https://facebook.com/cba.sucre" target="_blank" rel="noopener">Facebook · cba.sucre</a>
+          <a href="https://sistema-academico.cbasucre.org" target="_blank" rel="noopener">Sistema Académico</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-legal">© 2026 Centro Boliviano Americano – Sucre. Todos los derechos reservados.</span>
+      <div class="footer-flag">
+        <div class="flag-stripe" style="background:#D52B1E;"></div>
+        <div class="flag-stripe" style="background:#F4CE00;"></div>
+        <div class="flag-stripe" style="background:#007A3D;"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Script al final del body -->
+<script src="script.js"></script>
+</body>
+</html>
