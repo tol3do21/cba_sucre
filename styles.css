@@ -81,3 +81,36 @@ nav a:hover { opacity: 0.7 !important; }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #F5EFE0; }
 ::-webkit-scrollbar-thumb { background: #0A2540; }
+
+/* ── Programs Section ── */
+
+/* Photo inner div: initial state (scale set & animated by JS) */
+#program-img-inner {
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  transition: transform 0.7s ease-out;
+}
+
+/* Content block: initial visible state (opacity/transform animated by JS) */
+#program-content {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: opacity, transform;
+}
+
+/* Tab cards: smooth elevation on hover (inactive state only) */
+.prog-tab:not(.prog-tab--active):hover {
+  border-color: rgba(10, 37, 64, 0.35) !important;
+}
+
+/* Hide scrollbar utility for dynamic month tabs container */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+

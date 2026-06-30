@@ -451,98 +451,90 @@
       </section>
 
       <!-- ── Programs Section (Programas de Inglés) ── -->
-      <section id="programas" class="bg-cream pb-14 md:pb-24">
+      <section id="programas" class="bg-cream py-14 md:py-24">
         <div class="wrap">
-          
+
           <!-- Section Title -->
           <div class="text-center mb-10">
             <p class="eyebrow">★ ★ ★  Programas de Inglés  ★ ★ ★</p>
             <h2 class="section-h2 text-3xl md:text-5xl lg:text-6xl mb-3.5">Una clase para <span class="italic font-normal">cada</span> edad.</h2>
             <p class="text-xs md:text-sm text-muted italic max-w-lg mx-auto leading-relaxed">
-              Docentes certificados por el Departamento de Estado de EE.UU. · Currícula Cambridge & marco común europeo.
+              Docentes certificados por el Departamento de Estado de EE.UU. · Currícula Cambridge &amp; marco común europeo.
             </p>
           </div>
 
-          <!-- Tab Selector Buttons -->
+          <!-- Tab Selector Buttons (joined bordered row — estilo original) -->
           <div class="grid grid-cols-1 md:grid-cols-3 border border-navy bg-white mb-0">
-            
+
             <!-- Tab Kids -->
-            <button id="tab-btn-kids" class="relative bg-white text-navy border-b md:border-b-0 md:border-r border-navy py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none">
-              <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden accent-bar"></div>
-              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60">NIVEL · 01</div>
-              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none">Niños</div>
-              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair">6 – 11 años</div>
-              <div class="h-[1px] w-full bg-navy/12 my-1 accent-divider"></div>
-              <div class="text-[10px] tracking-wider opacity-60">10 niveles · 2 años</div>
+            <button id="tab-btn-kids" aria-pressed="false" class="prog-tab relative bg-white text-navy border-b md:border-b-0 md:border-r border-navy py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none transition-colors duration-200">
+              <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden prog-tab-accent"></div>
+              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60 prog-tab-eyebrow">NIVEL · 01</div>
+              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none prog-tab-title text-navy">Niños</div>
+              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair prog-tab-age text-navy">6 – 11 años</div>
+              <div class="h-[1px] w-full bg-navy/12 my-1 prog-tab-divider"></div>
+              <div class="text-[10px] tracking-wider opacity-60 prog-tab-duration text-navy">10 niveles · 2 años</div>
             </button>
 
-            <!-- Tab Teens -->
-            <button id="tab-btn-teens" class="relative bg-navy text-white border-b md:border-b-0 md:border-r border-navy py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none">
-              <div class="absolute inset-x-0 top-0 h-[3px] bg-red accent-bar"></div>
-              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60">NIVEL · 02</div>
-              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none">Adolescentes</div>
-              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair">12 – 16 años</div>
-              <div class="h-[1px] w-full bg-white/20 my-1 accent-divider"></div>
-              <div class="text-[10px] tracking-wider opacity-60">12 niveles · 2½ años</div>
+            <!-- Tab Teens (default active) -->
+            <button id="tab-btn-teens" aria-pressed="true" class="prog-tab prog-tab--active relative bg-navy text-white border-b md:border-b-0 md:border-r border-navy py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none transition-colors duration-200">
+              <div class="absolute inset-x-0 top-0 h-[3px] bg-red prog-tab-accent"></div>
+              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60 prog-tab-eyebrow">NIVEL · 02</div>
+              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none prog-tab-title">Adolescentes</div>
+              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair prog-tab-age">12 – 16 años</div>
+              <div class="h-[1px] w-full bg-white/20 my-1 prog-tab-divider"></div>
+              <div class="text-[10px] tracking-wider opacity-60 prog-tab-duration">12 niveles · 2½ años</div>
             </button>
 
             <!-- Tab Adults -->
-            <button id="tab-btn-adults" class="relative bg-white text-navy border-none py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none">
-              <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden accent-bar"></div>
-              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60">NIVEL · 03</div>
-              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none">Jóvenes y Adultos</div>
-              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair">17+ años</div>
-              <div class="h-[1px] w-full bg-navy/12 my-1 accent-divider"></div>
-              <div class="text-[10px] tracking-wider opacity-60">14 niveles · 3 años</div>
+            <button id="tab-btn-adults" aria-pressed="false" class="prog-tab relative bg-white text-navy border-none py-4 md:py-6 px-4 text-left cursor-pointer flex flex-col gap-1.5 focus:outline-none transition-colors duration-200">
+              <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden prog-tab-accent"></div>
+              <div class="text-[8px] md:text-[9px] tracking-widest font-bold opacity-60 prog-tab-eyebrow">NIVEL · 03</div>
+              <div class="font-playfair text-base md:text-2xl lg:text-3xl font-black italic leading-none prog-tab-title text-navy">Jóvenes y Adultos</div>
+              <div class="text-[10px] md:text-xs opacity-75 italic font-playfair prog-tab-age text-navy">17+ años</div>
+              <div class="h-[1px] w-full bg-navy/12 my-1 prog-tab-divider"></div>
+              <div class="text-[10px] tracking-wider opacity-60 prog-tab-duration text-navy">14 niveles · 3 años</div>
             </button>
 
           </div>
 
-          <!-- Tab Content Display Area -->
+          <!-- Tab Content Display Area (estilo original: un solo recuadro bordeado) -->
           <div class="grid grid-cols-1 md:grid-cols-[240px_1fr_200px] lg:grid-cols-[260px_1fr_220px] border border-navy border-t-0 bg-white">
-            
-            <!-- Left Column: Unsplash Image Card -->
-            <div id="program-img" class="bg-cover bg-center min-h-[220px] md:min-h-[340px] relative">
-              <div class="absolute inset-0 bg-gradient-to-b from-navy/15 to-navy/65"></div>
-              <div id="program-img-label" class="absolute left-4 bottom-4 text-white font-playfair italic text-sm">Inglés para adolescentes</div>
-            </div>
 
-            <!-- Middle Column: Main Information and Bullets -->
-            <div class="p-6 md:p-9 border-t md:border-t-0 md:border-l border-r border-navy/12 flex flex-col justify-between">
-              <p id="program-desc" class="font-playfair italic text-sm md:text-base lg:text-lg leading-relaxed text-navy mt-0 mb-6">
-                Inglés con el libro SUCCESS — la última palabra en textos para adolescentes, con temáticas y personajes apropiados para su edad.
-              </p>
-              
-              <!-- Check bullets list -->
-              <div id="program-bullets" class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                <!-- Javascript will insert bullets here -->
-              </div>
-              
-              <!-- Level Indicator Badges -->
-              <div id="program-badges" class="flex flex-wrap gap-1.5 pt-4 border-t border-navy/10 select-none">
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-navy text-white">A1</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-navy text-white">A1+</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-navy text-white">A2</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">A2+</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">B1</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">B1+</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">B2</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">B2+</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">C1</span>
-                <span class="px-2.5 py-1 text-[9px] font-bold tracking-wider border border-navy bg-transparent text-navy">C2</span>
+            <!-- Left Column: Photo -->
+            <div id="program-img" class="relative overflow-hidden min-h-[220px] md:min-h-[340px]">
+              <div id="program-img-inner" class="absolute inset-0 bg-cover bg-center"></div>
+              <div class="absolute inset-0 bg-gradient-to-b from-navy/15 to-navy/65 pointer-events-none"></div>
+              <div class="absolute left-5 md:left-7 bottom-5 md:bottom-7 right-5 md:right-7">
+                <div id="program-img-label" class="text-white font-playfair italic text-sm leading-tight"></div>
+                <div id="program-img-badge" class="mt-1.5 inline-block bg-red/85 text-white text-[8px] font-bold tracking-widest px-2 py-0.5 uppercase"></div>
               </div>
             </div>
 
-            <!-- Right Column: Schedules & Action Button -->
-            <div class="p-6 md:p-7 flex flex-col justify-between border-t md:border-t-0">
+            <!-- Middle Column: Description, Bullets & MCER Badges -->
+            <div class="p-6 md:p-8 border-t md:border-t-0 md:border-l border-r border-navy/12 flex flex-col justify-between">
+              <div id="program-content">
+                <p id="program-desc" class="font-playfair italic text-sm md:text-base lg:text-lg leading-relaxed text-navy mt-0 mb-6"></p>
+                <!-- Check bullets (injected by JS) -->
+                <div id="program-bullets" class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6"></div>
+              </div>
+              <!-- MCER Level badges (injected by JS) -->
               <div>
-                <div class="text-[9px] tracking-widest text-muted font-bold mb-3 uppercase">HORARIOS</div>
+                <div class="text-[8px] tracking-widest text-muted font-bold mb-2 uppercase">Marco Europeo de Referencia (MCER)</div>
+                <div id="program-badges" class="flex flex-wrap gap-1.5 pt-3 border-t border-navy/10 select-none"></div>
+              </div>
+            </div>
+
+            <!-- Right Column: Schedules & CTA -->
+            <div class="p-6 md:p-8 flex flex-col justify-between border-t md:border-t-0">
+              <div>
+                <div class="text-[9px] tracking-widest text-muted font-bold mb-3 uppercase">Horarios</div>
                 <div id="program-schedules" class="flex flex-col gap-1.5 mb-6">
-                  <!-- Javascript will insert schedules here -->
+                  <!-- JS inserts schedules here -->
                 </div>
               </div>
               <div>
-                <a href="#inscripcion" class="btn btn-red w-full text-center py-3 text-[10px] tracking-wider uppercase">Inscribirme →</a>
+                <a href="#inscripcion" class="btn btn-red w-full text-center py-3 text-[10px] tracking-wider uppercase block">Inscribirme →</a>
                 <p class="mt-2.5 text-[10px] text-muted italic text-center leading-none">Cupos limitados · 14 por aula</p>
               </div>
             </div>
@@ -560,37 +552,8 @@
             <!-- Left Filter Panel -->
             <div>
               <p class="eyebrow">★ Calendario Académico</p>
-              <h2 class="section-h2 text-2xl md:text-4xl lg:text-5xl mb-4">Ciclo<br><span class="italic font-normal">Mayo — Julio</span></h2>
-              <p class="text-[13px] leading-relaxed text-ink mb-6 italic">Selecciona un mes y filtra por programa. Las inscripciones cierran 5 días antes del inicio.</p>
-              
-              <!-- Filter Buttons Grid -->
-              <div class="grid gap-1">
-                
-                <!-- All Filter -->
-                <button id="filter-btn-all" class="flex items-center gap-2.5 border border-navy/10 px-3.5 py-2.5 text-xs text-ink bg-cream border-navy text-left focus:outline-none font-medium">
-                  <span class="w-2 h-2 rounded-full flex-shrink-0 bg-navy filter-dot"></span>
-                  <span>Todos los programas</span>
-                </button>
-                
-                <!-- Kids Filter -->
-                <button id="filter-btn-kids" class="flex items-center gap-2.5 border border-black/10 px-3.5 py-2.5 text-xs text-ink bg-transparent text-left focus:outline-none font-medium">
-                  <span class="w-2 h-2 rounded-full flex-shrink-0 bg-red hidden filter-dot"></span>
-                  <span>Niños 6–11</span>
-                </button>
-                
-                <!-- Teens Filter -->
-                <button id="filter-btn-teens" class="flex items-center gap-2.5 border border-black/10 px-3.5 py-2.5 text-xs text-ink bg-transparent text-left focus:outline-none font-medium">
-                  <span class="w-2 h-2 rounded-full flex-shrink-0 bg-gold hidden filter-dot"></span>
-                  <span>Adolescentes 12–16</span>
-                </button>
-
-                <!-- Adults Filter -->
-                <button id="filter-btn-adults" class="flex items-center gap-2.5 border border-black/10 px-3.5 py-2.5 text-xs text-ink bg-transparent text-left focus:outline-none font-medium">
-                  <span class="w-2 h-2 rounded-full flex-shrink-0 bg-navy hidden filter-dot"></span>
-                  <span>Adultos 17+</span>
-                </button>
-
-              </div>
+              <h2 class="section-h2 text-2xl md:text-4xl lg:text-5xl mb-4">Calendario<br><span id="calendar-dynamic-subtitle" class="italic font-normal text-[22px] md:text-3xl text-navy/80">Académico</span></h2>
+              <p class="text-[13px] leading-relaxed text-ink mb-6 italic">Selecciona un mes para ver los eventos. Las inscripciones cierran 5 días antes del inicio.</p>
               
               <div class="mt-6 border-t border-navy/15 pt-4">
                 <a href="images/calendario-2026.jpg" target="_blank" class="btn btn-outline-navy block w-full text-center text-[10px] py-2.5 no-underline">Ver Calendario 2026 ↗</a>
@@ -601,26 +564,8 @@
             <div>
               
               <!-- Month Tabs Selector -->
-              <div class="flex border-b-2 border-navy">
-                
-                <!-- Mayo Tab -->
-                <button id="month-btn-mayo" class="flex-1 py-3 px-3 relative bg-navy text-white border-none font-playfair text-lg md:text-2xl font-bold italic focus:outline-none">
-                  Mayo
-                  <div class="absolute inset-x-0 top-0 h-[3px] bg-red month-accent-bar"></div>
-                </button>
-                
-                <!-- Junio Tab -->
-                <button id="month-btn-junio" class="flex-1 py-3 px-3 relative bg-transparent text-navy border-none font-playfair text-lg md:text-2xl font-bold italic focus:outline-none">
-                  Junio
-                  <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden month-accent-bar"></div>
-                </button>
-                
-                <!-- Julio Tab -->
-                <button id="month-btn-julio" class="flex-1 py-3 px-3 relative bg-transparent text-navy border-none font-playfair text-lg md:text-2xl font-bold italic focus:outline-none">
-                  Julio
-                  <div class="absolute inset-x-0 top-0 h-[3px] bg-red hidden month-accent-bar"></div>
-                </button>
-
+              <div id="month-tabs-container" class="flex border-b-2 border-navy overflow-x-auto scrollbar-none whitespace-nowrap">
+                <!-- Generado dinámicamente por Javascript -->
               </div>
 
               <!-- List Container -->
@@ -634,98 +579,106 @@
         </div>
       </section>
 
-      <!-- ── Agenda Section (Agenda Cultural America 250) ── -->
-      <section id="eventos" class="relative bg-navy text-white py-14 md:py-24 overflow-hidden border-b border-white/10">
+      <!-- ── Agenda Section (American Spaces) ── -->
+      <section id="eventos" class="relative text-white py-14 md:py-24 overflow-hidden border-b border-white/10 bg-navy">
         
-        <!-- Star Overlay Pattern -->
-        <svg width="100%" height="100%" class="absolute inset-0 opacity-15 pointer-events-none" aria-hidden="true">
-          <defs>
-            <pattern id="eventsStars" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M30 18 L33 27 L42 27 L34.5 33 L37.5 42 L30 36.5 L22.5 42 L25.5 33 L18 27 L27 27 Z" fill="#fff"></path>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#eventsStars)"></rect>
-        </svg>
+        <!-- Subtle Campus Background Texture for the entire section -->
+        <div class="absolute inset-0 bg-cover bg-center pointer-events-none z-0" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&q=80');"></div>
+        <!-- Dark Navy Overlay to keep contrast high -->
+        <div class="absolute inset-0 bg-navy/95 z-0"></div>
 
-        <div class="wrap relative">
-          
-          <!-- Section Title -->
-          <div class="text-center mb-10">
-            <p class="text-[9px] md:text-[10px] tracking-[4px] text-gold font-bold mb-2.5">★ ★ ★  AGENDA AMERICA 250  ★ ★ ★</p>
-            <h2 class="font-playfair text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-2">Un año de <span class="text-gold italic font-normal">celebraciones</span>.</h2>
+        <div class="wrap relative z-10">
+          <div class="max-w-3xl mb-12 md:mb-16">
+            <h2 class="font-playfair text-3xl md:text-5xl lg:text-6xl font-black tracking-tight mb-2 text-white">Mucho más que un instituto. <span class="text-gold italic font-normal">Tu conexión con EE.UU.</span></h2>
           </div>
 
-          <!-- Events Split Grid -->
-          <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-6">
+          <!-- American Spaces Bento Grid (12 cols) -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
             
-            <!-- Left Side: Featured Showcase Card -->
-            <article class="relative overflow-hidden min-h-[380px] md:min-h-[420px] flex flex-col justify-between border border-white/15">
-              <div class="absolute inset-0 bg-gradient-to-tr from-red/95 via-red/55 to-red/10 mix-blend-multiply pointer-events-none z-0"></div>
-              <div class="absolute inset-0 bg-cover bg-center -z-10" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&q=80')"></div>
+            <!-- 1. Biblioteca Bilingüe (Hero Card - Ocupa todo el ancho) -->
+            <article class="md:col-span-12 relative overflow-hidden min-h-[340px] md:min-h-[400px] flex flex-col justify-between border border-white/20 z-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/90 shadow-xl shadow-black/50 rounded-lg">
+              <!-- Gradiente más oscuro para flotar sobre el Navy -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent pointer-events-none z-10"></div>
+              <div class="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-105" style="background-image: url('images/estudiantes.jpg')"></div>
               
-              <div class="relative z-10 p-6 md:p-10 flex flex-col justify-between h-full min-h-[380px] md:min-h-[420px]">
-                
-                <!-- Event Meta Header -->
-                <div class="flex justify-between items-center gap-4">
-                  <span class="bg-white text-red px-3 py-1 text-[9px] tracking-widest font-bold">★ EVENTO ESTELAR</span>
-                  <span class="font-playfair text-base md:text-lg italic">04 JUL 2026</span>
+              <div class="relative z-20 p-6 md:p-10 flex flex-col justify-between h-full">
+                <div>
+                  <span class="inline-block bg-gold text-navy px-3 py-1 text-[9px] tracking-widest font-bold uppercase mb-2 shadow-md">American Spaces</span>
                 </div>
-
-                <!-- Event Details Body -->
-                <div class="my-auto">
-                  <h3 class="font-playfair text-3xl md:text-5xl font-black leading-tight mb-3">Independence Day<br><span class="italic font-normal text-gold">The Big 250</span></h3>
-                  <p class="text-sm md:text-base leading-relaxed opacity-90 italic font-playfair max-w-md">
-                    Concierto, food trucks, fuegos artificiales y la ceremonia oficial con la Embajada de EE.UU.
+                <div class="mt-auto max-w-2xl">
+                  <h3 class="font-playfair text-3xl md:text-5xl font-bold leading-tight mb-3 text-white drop-shadow-md">Biblioteca Bilingüe</h3>
+                  <p class="text-sm md:text-base leading-relaxed text-white/90 mb-6 drop-shadow-sm">
+                    Acceso gratuito a la mayor colección de literatura en inglés, espacios de estudio y clubes de lectura.
                   </p>
+                  <div class="pt-4 flex">
+                    <button data-gallery="biblioteca" class="gallery-btn inline-flex items-center justify-center bg-white/20 hover:bg-white text-white hover:text-navy border border-white/40 transition-colors py-3 px-6 text-[10px] md:text-[11px] tracking-wider font-bold backdrop-blur-md uppercase w-full sm:w-auto text-center cursor-pointer shadow-lg">Ver Galería →</button>
+                  </div>
                 </div>
-
-                <!-- Event Footer details -->
-                <div class="flex flex-wrap gap-4 items-center border-t border-white/20 pt-4 mt-4">
-                  <span class="text-xs">📍 Patio CBA · Calle Calvo 301</span>
-                  <span class="text-xs opacity-75">🎟 Entrada libre · cupo limitado</span>
-                  <a href="#inscripcion" class="btn bg-white text-red ml-auto py-2.5 px-4 text-[9px] md:text-[10px] tracking-wider font-bold">Reservar →</a>
-                </div>
-
               </div>
             </article>
 
-            <!-- Right Side: Vertical List Cards -->
-            <div class="flex flex-col gap-3">
+            <!-- 2. EducationUSA (1/3 ancho) -->
+            <article class="md:col-span-4 relative overflow-hidden min-h-[300px] md:min-h-[340px] flex flex-col justify-between border border-white/20 z-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/90 shadow-xl shadow-black/50 rounded-lg">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10 pointer-events-none z-10"></div>
+              <div class="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80')"></div>
               
-              <!-- Event Card 1 -->
-              <article class="bg-white/5 border border-white/10 p-5 flex flex-col gap-2 flex-grow">
-                <div class="flex justify-between items-center gap-4">
-                  <span class="bg-gold text-navy px-2 py-0.5 text-[8px] tracking-wider font-bold">EDUCATIONUSA</span>
-                  <span class="font-playfair text-xs md:text-sm italic opacity-70">22 MAY 2026</span>
+              <div class="relative z-20 p-6 flex flex-col justify-between h-full">
+                <div>
+                  <span class="inline-block bg-red text-white px-3 py-1 text-[9px] tracking-widest font-bold uppercase mb-2 shadow-md">Asesoría</span>
                 </div>
-                <h4 class="font-playfair text-base md:text-lg font-bold text-white mt-1">Feria de Universidades Americanas</h4>
-                <p class="text-[12px] opacity-75 leading-relaxed mb-2">12 universidades de EE.UU. presentan programas, becas y proceso de admisión. Entrada libre.</p>
-                <div class="text-[11px] opacity-60 border-t border-white/10 pt-2 mt-auto">📍 Auditorio CBA</div>
-              </article>
-
-              <!-- Event Card 2 -->
-              <article class="bg-white/5 border border-white/10 p-5 flex flex-col gap-2 flex-grow">
-                <div class="flex justify-between items-center gap-4">
-                  <span class="bg-gold text-navy px-2 py-0.5 text-[8px] tracking-wider font-bold">CINE</span>
-                  <span class="font-playfair text-xs md:text-sm italic opacity-70">15 JUN 2026</span>
+                <div class="mt-auto">
+                  <h3 class="font-playfair text-2xl font-bold leading-tight mb-2 text-white drop-shadow-md">EducationUSA</h3>
+                  <p class="text-xs leading-relaxed text-white/90 mb-5 drop-shadow-sm">
+                    El centro oficial de asesoramiento para aplicar a becas y visas de estudio.
+                  </p>
+                  <div class="flex">
+                    <button data-gallery="educationusa" class="gallery-btn inline-flex items-center justify-center bg-white/10 hover:bg-white text-white hover:text-navy border border-white/30 transition-colors py-2 px-4 text-[9px] tracking-wider font-bold backdrop-blur-sm uppercase w-full text-center cursor-pointer">Ver Galería</button>
+                  </div>
                 </div>
-                <h4 class="font-playfair text-base md:text-lg font-bold text-white mt-1">Festival de Cine Indie Americano</h4>
-                <p class="text-[12px] opacity-75 leading-relaxed mb-2">Una semana de cine independiente: Sundance hits, documentales y Q&A con directores invitados.</p>
-                <div class="text-[11px] opacity-60 border-t border-white/10 pt-2 mt-auto">📍 Sala de Cine CBA</div>
-              </article>
+              </div>
+            </article>
 
-              <!-- Event Card 3 -->
-              <article class="bg-white/5 border border-white/10 p-5 flex flex-col gap-2 flex-grow">
-                <div class="flex justify-between items-center gap-4">
-                  <span class="bg-gold text-navy px-2 py-0.5 text-[8px] tracking-wider font-bold">FULBRIGHT</span>
-                  <span class="font-playfair text-xs md:text-sm italic opacity-70">30 ABR 2026</span>
+            <!-- 3. Maker Space Sucre (1/3 ancho) -->
+            <article class="md:col-span-4 relative overflow-hidden min-h-[300px] md:min-h-[340px] flex flex-col justify-between border border-white/20 z-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/90 shadow-xl shadow-black/50 rounded-lg">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10 pointer-events-none z-10"></div>
+              <div class="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80')"></div>
+              
+              <div class="relative z-20 p-6 flex flex-col justify-between h-full">
+                <div>
+                  <span class="inline-block bg-gold text-navy px-3 py-1 text-[9px] tracking-widest font-bold uppercase mb-2 shadow-md">Innovación</span>
                 </div>
-                <h4 class="font-playfair text-base md:text-lg font-bold text-white mt-1">Información Becas Fulbright 2027</h4>
-                <p class="text-[12px] opacity-75 leading-relaxed mb-2">Conoce los requisitos para postular a la beca más prestigiosa del gobierno de EE.UU.</p>
-                <div class="text-[11px] opacity-60 border-t border-white/10 pt-2 mt-auto">📍 Sala 3 · 18:30</div>
-              </article>
+                <div class="mt-auto">
+                  <h3 class="font-playfair text-2xl font-bold leading-tight mb-2 text-white drop-shadow-md">Maker Space</h3>
+                  <p class="text-xs leading-relaxed text-white/90 mb-5 drop-shadow-sm">
+                    Impresión 3D, robótica y desarrollo tecnológico comunitario.
+                  </p>
+                  <div class="flex">
+                    <button data-gallery="maker" class="gallery-btn inline-flex items-center justify-center bg-white/10 hover:bg-white text-white hover:text-navy border border-white/30 transition-colors py-2 px-4 text-[9px] tracking-wider font-bold backdrop-blur-sm uppercase w-full text-center cursor-pointer">Ver Galería</button>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-            </div>
+            <!-- 4. Cultura y Eventos (1/3 ancho) -->
+            <article class="md:col-span-4 relative overflow-hidden min-h-[300px] md:min-h-[340px] flex flex-col justify-between border border-white/20 z-0 group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/90 shadow-xl shadow-black/50 rounded-lg">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10 pointer-events-none z-10"></div>
+              <div class="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80')"></div>
+              
+              <div class="relative z-20 p-6 flex flex-col justify-between h-full">
+                <div>
+                  <span class="inline-block bg-navy border border-white/20 text-white px-3 py-1 text-[9px] tracking-widest font-bold uppercase mb-2 shadow-md">Comunidad</span>
+                </div>
+                <div class="mt-auto">
+                  <h3 class="font-playfair text-2xl font-bold leading-tight mb-2 text-white drop-shadow-md">Eventos</h3>
+                  <p class="text-xs leading-relaxed text-white/90 mb-5 drop-shadow-sm">
+                    Festivales, cine independiente americano e intercambio cultural.
+                  </p>
+                  <div class="flex">
+                    <button data-gallery="cultura" class="gallery-btn inline-flex items-center justify-center bg-white/10 hover:bg-white text-white hover:text-navy border border-white/30 transition-colors py-2 px-4 text-[9px] tracking-wider font-bold backdrop-blur-sm uppercase w-full text-center cursor-pointer">Ver Galería</button>
+                  </div>
+                </div>
+              </div>
+            </article>
 
           </div>
         </div>
@@ -903,13 +856,24 @@
                 </div>
 
                 <!-- Prop 3: Horarios de Atención -->
-                <div class="flex gap-4 py-3">
+                <div class="flex gap-4 py-3 border-b border-navy/8">
                   <svg class="w-5 h-5 text-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
                   <div>
                     <div class="font-playfair text-sm md:text-base text-navy font-bold">Horarios de Oficina</div>
                     <div class="text-xs text-muted mt-1">Lunes a Viernes: 08:30 – 12:00, 14:30 – 18:30. Sábados: 09:00 – 12:30.</div>
+                  </div>
+                </div>
+
+                <!-- Prop 4: Examen de Nivelación -->
+                <div class="flex gap-4 py-3">
+                  <svg class="w-5 h-5 text-red flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25Z" />
+                  </svg>
+                  <div>
+                    <div class="font-playfair text-sm md:text-base text-navy font-bold">Examen de Nivelación</div>
+                    <div class="text-xs text-muted mt-1">Recomendado para nuevos ingresos con conocimientos previos o exalumnos que retoman estudios tras una interrupción. Ayuda a definir tu nivel exacto.</div>
                   </div>
                 </div>
 
@@ -947,14 +911,14 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <!-- Full Name -->
                   <div>
-                    <label for="form-name" class="block text-[10px] tracking-wider font-bold text-navy uppercase mb-1.5">Nombre completo</label>
-                    <input id="form-name" type="text" placeholder="Ej. María Camila Rojas" class="block w-full px-3.5 py-2.5 bg-white border border-navy/18 text-xs text-ink placeholder-muted/60 rounded-none focus:outline-none focus:border-navy transition-colors font-inter" required>
+                    <label class="block text-[11px] font-bold tracking-widest text-navy uppercase mb-2">Tu Nombre Completo</label>
+                    <input type="text" id="form-name" class="w-full bg-white border border-black/10 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red focus:border-red transition-all" placeholder="Ej. Ana Pérez" required>
                   </div>
 
                   <!-- WhatsApp Number -->
                   <div>
-                    <label for="form-phone" class="block text-[10px] tracking-wider font-bold text-navy uppercase mb-1.5">WhatsApp / Celular</label>
-                    <input id="form-phone" type="tel" placeholder="Ej. 62900082" class="block w-full px-3.5 py-2.5 bg-white border border-navy/18 text-xs text-ink placeholder-muted/60 rounded-none focus:outline-none focus:border-navy transition-colors font-inter" required>
+                    <label class="block text-[11px] font-bold tracking-widest text-navy uppercase mb-2">Tu WhatsApp</label>
+                    <input id="form-phone" type="tel" placeholder="Ej. 62900082" class="w-full bg-white border border-black/10 px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-red focus:border-red transition-all" required>
                   </div>
                 </div>
 
@@ -1125,5 +1089,20 @@
 
   </div>
 
-</body>
+    <!-- ── Pop-Up Gallery Modal ── -->
+    <div id="gallery-modal" class="fixed inset-0 z-50 bg-black/90 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+      <button id="gallery-close" class="absolute top-6 right-6 text-white hover:text-gold text-4xl leading-none cursor-pointer transition-colors z-10">&times;</button>
+      
+      <div class="relative w-full max-w-5xl mx-auto flex flex-col items-center">
+        <!-- Title -->
+        <h3 id="gallery-title" class="font-playfair text-2xl md:text-4xl font-bold text-white mb-6 text-center">Galería</h3>
+        
+        <!-- Images Grid -->
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+          <!-- Images injected by JS -->
+        </div>
+      </div>
+    </div>
+
+  </body>
 </html>
