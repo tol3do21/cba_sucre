@@ -1,0 +1,6 @@
+codigo_antiguo/
+.agents/
+.gemini/
+.git/
+node_modules/
+package-lock.json

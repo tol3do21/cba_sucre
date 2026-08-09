@@ -6,20 +6,19 @@
 const PROGRAMS_DATA = {
 
   // ── NIVEL NIÑOS ─────────────────────────────────────────────────────────
-  // Series: Backpack Starter (Pearson) y Big English (Pearson)
-  // Rangos de nivel: Backpack Starter 3, 5 · Big English 1.1 – 5.4 · Big English Review 2
+  // Series: Big English (Pearson)
   kids: {
     id: "kids",
     label: "Niños",
-    ageRange: "6 – 11 años",
-    duration: "10 niveles · 2 años",
-    blurb: "Inglés interactivo a través del juego, canciones y actividades lúdicas con las series Backpack y Big English de Pearson, diseñadas para estimular la curiosidad natural y sentar bases sólidas desde la infancia.",
-    imgBadge: "Backpack · Big English",
+    ageRange: "7 – 11 años",
+    duration: "2 años",
+    blurb: "Inglés interactivo a través del juego, canciones y actividades lúdicas con la serie Big English de Pearson, diseñada para estimular la curiosidad natural y sentar bases sólidas desde la infancia.",
+    imgBadge: "Big English · Pearson",
     bullets: [
-      "Textos oficiales: Backpack Starter y Big English (Pearson)",
+      "Textos oficiales: Big English (Pearson)",
       "Proyectos con canciones, videos y juegos de roles",
       "Grupos de máximo 14 niños por aula",
-      "Evaluaciones trimestrales con reporte a los padres"
+      "Evaluaciones por módulo (casi todos los meses) con reporte a los padres"
     ],
     schedule: ["Lun & Mié · 16:00 – 17:30", "Mar & Jue · 16:00 – 17:30", "Sábados · 9:00 – 12:00"],
     levels: ["A1", "A1+", "A2"],
@@ -30,12 +29,11 @@ const PROGRAMS_DATA = {
 
   // ── NIVEL ADOLESCENTES ──────────────────────────────────────────────────
   // Series: Wider World (Pearson / BBC)
-  // Rangos: Wider World Starter 4 – 6.C · Wider World 1.3 – 4.5
   teens: {
     id: "teens",
     label: "Adolescentes",
-    ageRange: "12 – 16 años",
-    duration: "12 niveles · 2½ años",
+    ageRange: "12 – 14 años",
+    duration: "2½ años",
     blurb: "Fomenta el desarrollo lingüístico y de habilidades del siglo XXI con la serie Wider World de Pearson, producida en co-edición con la BBC. Conecta el inglés con temas del mundo real relevantes para los jóvenes.",
     imgBadge: "Wider World · Pearson / BBC",
     bullets: [
@@ -53,13 +51,11 @@ const PROGRAMS_DATA = {
 
   // ── NIVEL JÓVENES Y ADULTOS ────────────────────────────────────────────
   // Series: Top Notch Fundamentals → Top Notch → Summit → Grammar → Conversation → CBATELP
-  // Rangos: Top Notch Fundamentals 2 – 6.B · Top Notch 1.2 – 3.5 · Summit 1.2 – 2.3
-  //         Grammar A.1 – B.3 · Conversation 1 – 2.B · CBATELP 2 – 3
   adults: {
     id: "adults",
     label: "Adultos",
-    ageRange: "17+ años",
-    duration: "14 niveles · 3 años",
+    ageRange: "15+ años",
+    duration: "3 años",
     blurb: "Programa de alta exigencia académica y profesional. Emplea las series Top Notch Fundamentals, Top Notch y Summit de Pearson, alcanzando niveles avanzados B2/C1 certificados por el Ministerio de Educación de Bolivia.",
     imgBadge: "Top Notch · Summit · Pearson",
     bullets: [
@@ -203,8 +199,8 @@ function initCountdown() {
     if (secondsEl) secondsEl.innerHTML = String(seconds).padStart(2, "0");
   }
 
+  let timerInterval = setInterval(updateTimer, 1000);
   updateTimer();
-  const timerInterval = setInterval(updateTimer, 1000);
 }
 
 // ── Programs Tabs Switcher ──
@@ -592,7 +588,7 @@ function showToast(message, isError = false) {
   if (isError) {
     toast.style.backgroundColor = "#B22234";
     toast.style.color = "#fff";
-    toast.style.borderColor = "#8E1A28";
+        toast.style.borderColor = "#8E1A28";
   } else {
     toast.style.backgroundColor = "#0A2540";
     toast.style.color = "#fff";
@@ -623,36 +619,95 @@ function showToast(message, isError = false) {
   }, 4000);
 }
 
-// ── Pop-up Gallery Logic ──
+// ── Pop-up Gallery Logic (Split Modal: Gallery + Info) ──
 const galleryData = {
+
   biblioteca: {
-    title: "Biblioteca Bilingüe",
+    title: "Biblioteca \"Robert J. Callahan\"",
+    badge: "American Spaces · Biblioteca Pública",
+    badgeColor: "gold",
+    description: "La Biblioteca Pública \"Robert J. Callahan\" es uno de los espacios culturales más completos de Sucre. Con más de 3,000 volúmenes en inglés y español, ofrece acceso gratuito a toda la comunidad en su sede de la Calle Calvo #332.",
+    contact: "📍 Calle Calvo #332 · ☎ 4 6443155 · Lun–Vie 15:00–20:00",
+    features: [
+      "Más de 3,000 volúmenes en inglés y español (colección general y de referencia)",
+      "Lectura en sala abierta y gratuita para toda la comunidad",
+      "Préstamo a domicilio con carnet de socio gratuito",
+      "Intercambio y venta periódica de libros de segunda mano",
+      "Estación Digital: computadoras de acceso público con WiFi",
+      "Tours virtuales con el Smithsonian Institution y otras instituciones",
+      "Exhibiciones culturales y eventos especiales (Freedom 250, etc.)"
+    ],
+    cta: { text: "Contactar biblioteca →", href: "tel:+59146443155", style: "outline" },
     images: [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80",
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&q=80",
       "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
       "https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=800&q=80"
     ]
   },
+
   educationusa: {
-    title: "EducationUSA",
+    title: "EducationUSA Sucre",
+    badge: "Asesoría Oficial · 100% Gratuita",
+    badgeColor: "red",
+    description: "Centro oficial de asesoramiento del Departamento de Estado de los EE.UU., ubicado dentro del CBA Sucre. Todos sus servicios son completamente gratuitos para estudiantes bolivianos que deseen estudiar en universidades norteamericanas.",
+    contact: "📍 Calle Calvo #301 · 🔗 linktr.ee/EdUSAbo · 📸 @EdUSAbo",
+    features: [
+      "Asesoramiento individual y grupal sobre universidades en Estados Unidos",
+      "Información sobre más de 4,000 instituciones educativas acreditadas",
+      "Orientación sobre financiamiento, becas parciales y totales disponibles",
+      "Preparación y orientación para exámenes TOEFL, SAT, GRE y GMAT",
+      "Servicio al Visitante Internacional para asesores de universidades extranjeras",
+      "Sesiones informativas con representantes de universidades de EE.UU.",
+      "Orientación para trámite de visa de estudiante F-1 y J-1",
+      "Todos los servicios son 100% gratuitos · Sin excepción"
+    ],
+    cta: { text: "Solicitar asesoría → linktr.ee/EdUSAbo", href: "https://linktr.ee/EdUSAbo", style: "red", external: true },
     images: [
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
+      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=80",
       "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80",
       "https://images.unsplash.com/photo-1519452314545-5606d04269e8?w=800&q=80"
     ]
   },
+
   maker: {
     title: "Maker Space Sucre",
+    badge: "Innovación · American Spaces",
+    badgeColor: "gold",
+    description: "Un espacio de innovación tecnológica y creatividad abierto a toda la comunidad sucrense. Combinamos programación, impresión 3D y fabricación digital para desarrollar habilidades técnicas del siglo XXI.",
+    contact: "📍 Calle Calvo #332 · Dentro de la Biblioteca CBA Sucre",
+    features: [
+      "Impresoras 3D de última generación disponibles para proyectos",
+      "Cursos combinados de Programación y diseño en 3D",
+      "Kits de robótica y programación con Arduino y Raspberry Pi",
+      "Talleres de diseño digital, corte láser y electrónica básica",
+      "Espacio colaborativo para proyectos comunitarios e innovación",
+      "Acceso preferencial para estudiantes activos del CBA Sucre"
+    ],
+    cta: { text: "Consultar talleres disponibles →", href: "#contacto", style: "outline" },
     images: [
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80",
       "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
       "https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=800&q=80"
     ]
   },
+
   cultura: {
-    title: "Cultura y Eventos",
+    title: "Eventos y Cultura",
+    badge: "Comunidad · Intercambio Cultural",
+    badgeColor: "navy",
+    description: "Más de 70 años fomentando el intercambio cultural entre Bolivia y los Estados Unidos. Organizamos eventos únicos que conectan a la comunidad sucrense con la cultura, historia y valores norteamericanos.",
+    contact: "📍 Calle Calvo #301, Sucre · Para eventos especiales consultar fechas",
+    features: [
+      "Proyecciones de cine independiente americano en pantalla grande",
+      "Festivales culturales anuales: Halloween, Thanksgiving, 4th of July",
+      "Conversatorios y charlas con visitantes y artistas de EE.UU.",
+      "Exposiciones de fotografía, arte y muestra Freedom 250",
+      "Eventos oficiales America 250 en colaboración con la Embajada de EE.UU.",
+      "Clubes de conversación en inglés abiertos a toda la comunidad"
+    ],
+    cta: { text: "Ver calendario de eventos →", href: "#calendario", style: "outline" },
     images: [
-      "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80",
+      "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=80",
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
       "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80"
     ]
@@ -660,36 +715,135 @@ const galleryData = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("gallery-modal");
+  const modal     = document.getElementById("gallery-modal");
   if (!modal) return;
-  
-  const titleEl = document.getElementById("gallery-title");
-  const gridEl = document.getElementById("gallery-grid");
-  const closeBtn = document.getElementById("gallery-close");
+
+  const modalInner = document.getElementById("gallery-modal-inner");
+  const closeBtn   = document.getElementById("gallery-close");
   const galleryBtns = document.querySelectorAll(".gallery-btn");
+
+  // Badge color map
+  const badgeClasses = {
+    gold:  "bg-gold text-navy",
+    red:   "bg-red text-white",
+    navy:  "bg-white/10 border border-white/25 text-white"
+  };
 
   function openModal(galleryId) {
     const data = galleryData[galleryId];
-    if (!data) return;
+    if (!data || !modalInner) return;
 
-    // Set Title
-    titleEl.textContent = data.title;
-    
-    // Inject Images
-    gridEl.innerHTML = data.images.map(url => `
-      <div class="aspect-[4/3] overflow-hidden bg-navy/50 rounded-sm">
-        <img src="${url}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Gallery Image" loading="lazy">
+    const badgeClass = badgeClasses[data.badgeColor] || badgeClasses.navy;
+    const ctaTarget  = data.cta.external ? 'target="_blank" rel="noopener noreferrer"' : "";
+    const ctaClass   = data.cta.style === "red"
+      ? "bg-red hover:bg-red-deep text-white"
+      : "bg-white/10 hover:bg-white text-white hover:text-navy border border-white/30 backdrop-blur-sm";
+
+    // Features list HTML
+    const featuresHtml = data.features.map(f => `
+      <div class="flex items-start gap-3">
+        <svg class="w-3.5 h-3.5 text-gold flex-shrink-0 mt-[3px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
+        </svg>
+        <span class="text-[12.5px] leading-relaxed text-white/80">${f}</span>
       </div>
     `).join("");
 
-    // Show Modal
+    // Thumbnails strip HTML
+    const thumbsHtml = data.images.map((url, i) => `
+      <button class="gallery-thumb flex-shrink-0 w-16 h-11 overflow-hidden border-2 transition-all duration-200 focus:outline-none ${i === 0 ? "border-gold opacity-100" : "border-transparent opacity-50 hover:opacity-90"}" data-src="${url}" aria-label="Ver imagen ${i + 1}">
+        <img src="${url}" class="w-full h-full object-cover pointer-events-none" alt="" loading="lazy">
+      </button>
+    `).join("");
+
+    // Build split layout
+    modalInner.innerHTML = `
+      <!-- Columna Izquierda: Galería de imágenes -->
+      <div class="w-full md:w-[55%] flex flex-col bg-black flex-shrink-0">
+        <!-- Imagen principal -->
+        <div class="relative overflow-hidden flex-1" style="min-height: 240px;">
+          <img id="modal-main-img" src="${data.images[0]}" class="w-full h-full object-cover" style="transition: opacity 0.25s ease;" alt="${data.title}">
+          <!-- Contador de imágenes -->
+          <div id="modal-img-counter" class="absolute bottom-3 right-3 bg-black/65 text-white text-[10px] tracking-widest font-bold px-2.5 py-1 backdrop-blur-sm">1 / ${data.images.length}</div>
+        </div>
+        <!-- Tiras de miniaturas -->
+        <div class="flex gap-2 p-3 bg-black/90 flex-shrink-0 overflow-x-auto" style="scrollbar-width: none;">
+          ${thumbsHtml}
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Información -->
+      <div class="w-full md:w-[45%] flex flex-col bg-navy-deep text-white flex-shrink-0" style="overflow-y: auto; max-height: 88vh;">
+        <div class="p-6 md:p-8 flex flex-col gap-5 h-full">
+
+          <!-- Badge + Título -->
+          <div>
+            <span class="inline-block px-3 py-1 text-[9px] tracking-widest font-bold uppercase mb-3 ${badgeClass}">${data.badge}</span>
+            <h3 class="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">${data.title}</h3>
+          </div>
+
+          <!-- Descripción -->
+          <p class="text-[13px] leading-relaxed text-white/70 pb-4 border-b border-white/10">${data.description}</p>
+
+          <!-- Lista de servicios/características -->
+          <div class="flex flex-col gap-3 flex-1">
+            <div class="text-[9px] tracking-widest font-bold text-gold/80 uppercase mb-1">Lo que ofrecemos</div>
+            ${featuresHtml}
+          </div>
+
+          <!-- Datos de contacto -->
+          <div class="text-[11px] text-white/45 leading-relaxed border-t border-white/8 pt-3">
+            ${data.contact}
+          </div>
+
+          <!-- Botón CTA -->
+          <div>
+            <a href="${data.cta.href}" ${ctaTarget} class="flex items-center justify-center w-full py-3 px-5 text-[11px] tracking-widest font-bold uppercase transition-all duration-200 no-underline ${ctaClass}">
+              ${data.cta.text}
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Lógica de miniaturas — clic para cambiar imagen principal
+    const thumbBtns = modalInner.querySelectorAll(".gallery-thumb");
+    const mainImgEl = document.getElementById("modal-main-img");
+    const counterEl = document.getElementById("modal-img-counter");
+
+    thumbBtns.forEach((btn, idx) => {
+      btn.addEventListener("click", () => {
+        const src = btn.getAttribute("data-src");
+
+        // Fade out → cambiar src → fade in
+        if (mainImgEl) {
+          mainImgEl.style.opacity = "0";
+          setTimeout(() => {
+            mainImgEl.src = src;
+            mainImgEl.style.opacity = "1";
+          }, 220);
+        }
+
+        // Actualizar contador
+        if (counterEl) counterEl.textContent = `${idx + 1} / ${data.images.length}`;
+
+        // Actualizar borde activo en miniaturas
+        thumbBtns.forEach(t => {
+          t.classList.remove("border-gold", "opacity-100");
+          t.classList.add("border-transparent", "opacity-50");
+        });
+        btn.classList.remove("border-transparent", "opacity-50");
+        btn.classList.add("border-gold", "opacity-100");
+      });
+    });
+
+    // Mostrar modal con transición
     modal.classList.remove("hidden");
-    // Small delay to allow display:block to apply before animating opacity
     setTimeout(() => {
       modal.classList.remove("opacity-0");
       modal.classList.add("opacity-100");
     }, 10);
-    document.body.style.overflow = "hidden"; // Prevent background scrolling
+    document.body.style.overflow = "hidden";
   }
 
   function closeModal() {
@@ -697,12 +851,12 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("opacity-0");
     setTimeout(() => {
       modal.classList.add("hidden");
-      gridEl.innerHTML = ""; // clean up
-      document.body.style.overflow = ""; // Restore scrolling
+      if (modalInner) modalInner.innerHTML = "";
+      document.body.style.overflow = "";
     }, 300);
   }
 
-  // Attach Listeners
+  // Listeners en botones de galería
   galleryBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -720,3 +874,167 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// ── CBA Assistant Chatbot Logic ──
+function initChatbot() {
+  const fab = document.getElementById('chatbot-fab');
+  const windowEl = document.getElementById('chatbot-window');
+  const closeBtn = document.getElementById('chatbot-close');
+  const messagesEl = document.getElementById('chatbot-messages');
+  const optionsEl = document.getElementById('chatbot-options');
+
+  if (!fab || !windowEl || !messagesEl || !optionsEl) return;
+
+  let isOpen = false;
+  let initialized = false;
+
+  const chatFlow = {
+    start: {
+      text: "¡Hola! Soy el Asistente CBA. ¿En qué puedo ayudarte hoy?",
+      options: [
+        { label: "📘 Programas y Cursos", target: "programs" },
+        { label: "🕒 Horarios y Precios", target: "pricing" },
+        { label: "📍 Ubicación", target: "location" },
+        { label: "💬 Hablar con un asesor", target: "whatsapp", action: true }
+      ]
+    },
+    programs: {
+      text: "Ofrecemos programas para diferentes edades:<br><br>• <strong>Niños</strong> (7–11 años) · Big English · Pearson<br>• <strong>Adolescentes</strong> (12–14 años) · Wider World · BBC<br>• <strong>Jóvenes y Adultos</strong> (15+) · Top Notch · Summit<br><br>Preparación para certificaciones Cambridge y TOEFL.",
+      options: [
+        { label: "💬 Hablar con un asesor", target: "whatsapp", action: true },
+        { label: "↩ Volver al inicio", target: "start" }
+      ]
+    },
+    pricing: {
+      text: "Nuestros costos varían según el programa. Para darte un monto exacto y revisar la disponibilidad de horarios, un asesor puede ayudarte con mucho gusto.",
+      options: [
+        { label: "💬 Contactar asesor", target: "whatsapp", action: true },
+        { label: "↩ Volver al inicio", target: "start" }
+      ]
+    },
+    location: {
+      text: "Nos encontramos en el corazón de Sucre:<br><br>📍 <strong>Calle Calvo #301</strong> esq. Potosí<br>🕐 Lun–Vie: 8:00 – 20:00<br>🕐 Sáb: 9:00 – 13:00<br><br>¡Te esperamos!",
+      options: [
+        { label: "↩ Volver al inicio", target: "start" }
+      ]
+    }
+  };
+
+  function openChat() {
+    isOpen = true;
+    windowEl.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+    windowEl.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+    if (!initialized) {
+      initialized = true;
+      setTimeout(() => loadStep('start'), 300);
+    }
+  }
+
+  function closeChat() {
+    isOpen = false;
+    windowEl.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+    windowEl.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+  }
+
+  fab.addEventListener('click', () => {
+    isOpen ? closeChat() : openChat();
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeChat);
+
+  function appendMessage(sender, html) {
+    const wrapper = document.createElement('div');
+    wrapper.className = `flex ${sender === 'bot' ? 'items-start gap-2' : 'justify-end'}`;
+
+    if (sender === 'bot') {
+      const avatar = document.createElement('img');
+      avatar.src = 'logos/logo-cba.png';
+      avatar.alt = 'CBA';
+      avatar.className = 'w-6 h-6 rounded-full object-contain bg-white border border-navy/10 flex-shrink-0 mt-0.5 p-0.5';
+      wrapper.appendChild(avatar);
+    }
+
+    const bubble = document.createElement('div');
+    bubble.className = `max-w-[80%] rounded-2xl px-4 py-2.5 text-[13px] leading-relaxed shadow-sm ${
+      sender === 'bot'
+        ? 'bg-white text-navy rounded-tl-sm border border-black/5'
+        : 'bg-navy text-white rounded-tr-sm'
+    }`;
+    bubble.innerHTML = html;
+    wrapper.appendChild(bubble);
+    messagesEl.appendChild(wrapper);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function showTyping() {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'flex items-start gap-2';
+    wrapper.id = 'typing-indicator';
+
+    const avatar = document.createElement('img');
+    avatar.src = 'logos/logo-cba.png';
+    avatar.alt = 'CBA';
+    avatar.className = 'w-6 h-6 rounded-full object-contain bg-white border border-navy/10 flex-shrink-0 mt-0.5 p-0.5';
+
+    const bubble = document.createElement('div');
+    bubble.className = 'bg-white rounded-2xl rounded-tl-sm px-4 py-3.5 shadow-sm border border-black/5 flex items-center gap-1.5';
+    bubble.innerHTML = `
+      <div class="w-1.5 h-1.5 bg-navy/40 rounded-full animate-bounce" style="animation-delay:0ms"></div>
+      <div class="w-1.5 h-1.5 bg-navy/40 rounded-full animate-bounce" style="animation-delay:150ms"></div>
+      <div class="w-1.5 h-1.5 bg-navy/40 rounded-full animate-bounce" style="animation-delay:300ms"></div>
+    `;
+    wrapper.appendChild(avatar);
+    wrapper.appendChild(bubble);
+    messagesEl.appendChild(wrapper);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function hideTyping() {
+    const indicator = document.getElementById('typing-indicator');
+    if (indicator) indicator.remove();
+  }
+
+  function loadStep(stepKey) {
+    const step = chatFlow[stepKey];
+    if (!step) return;
+
+    optionsEl.innerHTML = '';
+    showTyping();
+
+    setTimeout(() => {
+      hideTyping();
+      appendMessage('bot', step.text);
+      step.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'w-full text-left px-4 py-2.5 bg-white border border-black/10 rounded-xl text-[12px] text-navy font-semibold hover:bg-cream hover:border-gold transition-colors focus:outline-none';
+        btn.textContent = opt.label;
+        btn.addEventListener('click', () => handleOptionClick(opt));
+        optionsEl.appendChild(btn);
+      });
+    }, 700);
+  }
+
+  function handleOptionClick(opt) {
+    optionsEl.innerHTML = '';
+    appendMessage('user', opt.label);
+
+    if (opt.action && opt.target === 'whatsapp') {
+      setTimeout(() => {
+        showTyping();
+        setTimeout(() => {
+          hideTyping();
+          appendMessage('bot', '¡Genial! Te estoy redirigiendo a WhatsApp con uno de nuestros asesores...');
+          setTimeout(() => {
+            window.open('https://wa.me/59162900082', '_blank');
+            closeChat();
+          }, 1500);
+        }, 700);
+      }, 300);
+      return;
+    }
+
+    setTimeout(() => loadStep(opt.target), 300);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initChatbot);
