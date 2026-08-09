@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: tol3do21/cba_sucre
+  branch: master
+  # base_url: "https://tu-worker.tunombre.workers.dev" # Descomentar y poner la URL del Worker OAuth de Cloudflare
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "config"
+    label: "Configuración General"
+    editor:
+      preview: false
+    files:
+      - label: "Información del Sitio"
+        name: "site_info"
+        file: "data/content.json"
+        fields:
+          - {label: "Texto de Notificación", name: "notification_text", widget: "string"}

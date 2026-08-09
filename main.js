@@ -146,7 +146,25 @@ document.addEventListener("DOMContentLoaded", () => {
   initProgramsTab();
   initCalendar();
   initInscriptionForm();
+  fetchContent();
 });
+
+// ── CMS Content Fetcher ──
+async function fetchContent() {
+  try {
+    const res = await fetch('data/content.json');
+    if (!res.ok) throw new Error("No se pudo cargar content.json");
+    const data = await res.json();
+    
+    // Inyectar datos en el DOM
+    if (data.site_info && data.site_info.notification_text) {
+      const notifEl = document.getElementById("notification-text");
+      if (notifEl) notifEl.textContent = data.site_info.notification_text;
+    }
+  } catch (err) {
+    console.error("Error cargando CMS content:", err);
+  }
+}
 
 // ── Mobile Menu Navigation ──
 function initMobileMenu() {
