@@ -1,0 +1,11 @@
+name = "cba-sucre-cms-auth"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# Tu GITHUB_CLIENT_ID se debe colocar aquí o configurarlo mediante el Dashboard de Cloudflare
+GITHUB_CLIENT_ID = "ACA_VA_TU_CLIENT_ID"
+
+# NUNCA guardes el GITHUB_CLIENT_SECRET en este archivo.
+# Debes añadirlo ejecutando en tu terminal:
+# npx wrangler secret put GITHUB_CLIENT_SECRET
