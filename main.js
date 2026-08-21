@@ -18,9 +18,9 @@ const PROGRAMS_DATA = {
       "Textos oficiales: Big English (Pearson)",
       "Proyectos con canciones, videos y juegos de roles",
       "Grupos de máximo 14 niños por aula",
-      "Evaluaciones por módulo (casi todos los meses) con reporte a los padres"
+      "Evaluaciones por módulo con reporte a los padres"
     ],
-    schedule: ["Lun & Mié · 16:00 – 17:30", "Mar & Jue · 16:00 – 17:30", "Sábados · 9:00 – 12:00"],
+    schedule: ["Lun & Mié · 16:00 – 17:30", "Mar & Jue · 16:00 – 17:30"],
     levels: ["A1", "A1+", "A2"],
     photo: "images/kids.jpg",
     photoPosition: "center",
@@ -28,21 +28,21 @@ const PROGRAMS_DATA = {
   },
 
   // ── NIVEL ADOLESCENTES ──────────────────────────────────────────────────
-  // Series: Wider World (Pearson / BBC)
+  // Series: Wider World (Pearson)
   teens: {
     id: "teens",
     label: "Adolescentes",
     ageRange: "12 – 14 años",
     duration: "2½ años",
-    blurb: "Fomenta el desarrollo lingüístico y de habilidades del siglo XXI con la serie Wider World de Pearson, producida en co-edición con la BBC. Conecta el inglés con temas del mundo real relevantes para los jóvenes.",
-    imgBadge: "Wider World · Pearson / BBC",
+    blurb: "Fomenta el desarrollo lingüístico y de habilidades del siglo XXI con la serie Wider World de Pearson. Conecta el inglés con temas del mundo real relevantes para los jóvenes.",
+    imgBadge: "Wider World · Pearson",
     bullets: [
-      "Textos oficiales: Wider World (Pearson & BBC)",
-      "Preparación para certificaciones Cambridge KET / PET / FCE",
+      "Textos oficiales: Wider World (Pearson)",
+      "Desarrollo de fluidez conversacional y pensamiento crítico",
       "Proyectos colaborativos, debates y clubes culturales",
       "Asesoramiento gratuito para estudios con EducationUSA"
     ],
-    schedule: ["Lun & Mié · 17:45 – 19:15", "Mar & Jue · 17:45 – 19:15", "Sábados · 14:00 – 17:00"],
+    schedule: ["Lun & Mié · 17:45 – 19:15", "Mar & Jue · 17:45 – 19:15"],
     levels: ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2"],
     photo: "images/adoslecentes.jpg",
     photoPosition: "center 60%",
@@ -50,21 +50,21 @@ const PROGRAMS_DATA = {
   },
 
   // ── NIVEL JÓVENES Y ADULTOS ────────────────────────────────────────────
-  // Series: Top Notch Fundamentals → Top Notch → Summit → Grammar → Conversation → CBATELP
+  // Series: Top Notch → Summit → Grammar → Conversation → CBATELP
   adults: {
     id: "adults",
     label: "Adultos",
     ageRange: "15+ años",
     duration: "3 años",
-    blurb: "Programa de alta exigencia académica y profesional. Emplea las series Top Notch Fundamentals, Top Notch y Summit de Pearson, alcanzando niveles avanzados B2/C1 certificados por el Ministerio de Educación de Bolivia.",
+    blurb: "Programa de alta exigencia académica y profesional con las series Top Notch y Summit de Pearson, alcanzando niveles avanzados B2/C1 certificados por el Ministerio de Educación de Bolivia.",
     imgBadge: "Top Notch · Summit · Pearson",
     bullets: [
-      "Textos oficiales: Top Notch Fundamentals, Top Notch y Summit (Pearson)",
+      "Textos oficiales: Top Notch y Summit (Pearson)",
       "Módulos de Grammar A, Grammar B y Conversation avanzado",
       "Programa CBATELP: certificación institucional de alto nivel",
       "Preparación TOEFL iBT y certificación del Ministerio de Educación"
     ],
-    schedule: ["Lun a Vie · 7:00 – 8:30", "Lun a Vie · 19:00 – 20:30", "Sábados · 9:00 – 13:00"],
+    schedule: ["Lun a Vie · 7:00 – 8:30", "Lun a Vie · 19:00 – 20:30"],
     levels: ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C2"],
     photo: "images/jovenes_adultos.jpg",
     photoPosition: "center 80%",
@@ -641,19 +641,19 @@ function showToast(message, isError = false) {
 const galleryData = {
 
   biblioteca: {
-    title: "Biblioteca \"Robert J. Callahan\"",
+    title: "Biblioteca \"Robert Callahan\"",
     badge: "American Spaces · Biblioteca Pública",
     badgeColor: "gold",
-    description: "La Biblioteca Pública \"Robert J. Callahan\" es uno de los espacios culturales más completos de Sucre. Con más de 3,000 volúmenes en inglés y español, ofrece acceso gratuito a toda la comunidad en su sede de la Calle Calvo #332.",
+    description: "La Biblioteca Pública \"Robert Callahan\" es uno de los espacios culturales y educativos más completos de Sucre. Con más de 3,000 volúmenes en inglés y español, ofrece acceso gratuito a recursos físicos y digitales en su sede de la Calle Calvo #332.",
     contact: "📍 Calle Calvo #332 · ☎ 4 6443155 · Lun–Vie 15:00–20:00",
     features: [
       "Más de 3,000 volúmenes en inglés y español (colección general y de referencia)",
       "Lectura en sala abierta y gratuita para toda la comunidad",
-      "Préstamo a domicilio con carnet de socio gratuito",
-      "Intercambio y venta periódica de libros de segunda mano",
+      "Acceso digital a la plataforma eLibraryUSA (bases de datos y revistas)",
+      "Intercambio y venta periódica de libros",
       "Estación Digital: computadoras de acceso público con WiFi",
       "Tours virtuales con el Smithsonian Institution y otras instituciones",
-      "Exhibiciones culturales y eventos especiales (Freedom 250, etc.)"
+      "Exhibiciones culturales y eventos especiales Freedom 250"
     ],
     cta: { text: "Contactar biblioteca →", href: "tel:+59146443155", style: "outline" },
     images: [
@@ -673,7 +673,7 @@ const galleryData = {
       "Asesoramiento individual y grupal sobre universidades en Estados Unidos",
       "Información sobre más de 4,000 instituciones educativas acreditadas",
       "Orientación sobre financiamiento, becas parciales y totales disponibles",
-      "Preparación y orientación para exámenes TOEFL, SAT, GRE y GMAT",
+      "Preparación y orientación para exámenes TOEFL iBT, SAT, GRE y GMAT",
       "Servicio al Visitante Internacional para asesores de universidades extranjeras",
       "Sesiones informativas con representantes de universidades de EE.UU.",
       "Orientación para trámite de visa de estudiante F-1 y J-1",
@@ -691,15 +691,15 @@ const galleryData = {
     title: "Maker Space Sucre",
     badge: "Innovación · American Spaces",
     badgeColor: "gold",
-    description: "Un espacio de innovación tecnológica y creatividad abierto a toda la comunidad sucrense. Combinamos programación, impresión 3D y fabricación digital para desarrollar habilidades técnicas del siglo XXI.",
+    description: "Un espacio de innovación tecnológica y creatividad abierto a toda la comunidad sucrense. Combinamos robótica, programación, impresión 3D y diseño digital para impulsar la educación y habilidades STEM.",
     contact: "📍 Calle Calvo #332 · Dentro de la Biblioteca CBA Sucre",
     features: [
-      "Impresoras 3D de última generación disponibles para proyectos",
-      "Cursos combinados de Programación y diseño en 3D",
-      "Kits de robótica y programación con Arduino y Raspberry Pi",
-      "Talleres de diseño digital, corte láser y electrónica básica",
-      "Espacio colaborativo para proyectos comunitarios e innovación",
-      "Acceso preferencial para estudiantes activos del CBA Sucre"
+      "Cursos y talleres de Robótica",
+      "Cursos y talleres de Programación",
+      "Cursos y talleres de Diseño en 3D e Impresión 3D",
+      "Promovemos la educación y habilidades STEM en niños y jóvenes",
+      "Kits interactivos con Arduino, Raspberry Pi y sensores",
+      "Espacio colaborativo de innovación abierto a toda la comunidad"
     ],
     cta: { text: "Consultar talleres disponibles →", href: "#contacto", style: "outline" },
     images: [
@@ -720,7 +720,7 @@ const galleryData = {
       "Festivales culturales anuales: Halloween, Thanksgiving, 4th of July",
       "Conversatorios y charlas con visitantes y artistas de EE.UU.",
       "Exposiciones de fotografía, arte y muestra Freedom 250",
-      "Eventos oficiales America 250 en colaboración con la Embajada de EE.UU.",
+      "Eventos oficiales Freedom 250 en colaboración con la Embajada de EE.UU.",
       "Clubes de conversación en inglés abiertos a toda la comunidad"
     ],
     cta: { text: "Ver calendario de eventos →", href: "#calendario", style: "outline" },
@@ -917,7 +917,7 @@ function initChatbot() {
       ]
     },
     programs: {
-      text: "Ofrecemos programas para diferentes edades:<br><br>• <strong>Niños</strong> (7–11 años) · Big English · Pearson<br>• <strong>Adolescentes</strong> (12–14 años) · Wider World · BBC<br>• <strong>Jóvenes y Adultos</strong> (15+) · Top Notch · Summit<br><br>Preparación para certificaciones Cambridge y TOEFL.",
+      text: "Ofrecemos programas para diferentes edades:<br><br>• <strong>Niños</strong> (7–11 años) · Big English · Pearson<br>• <strong>Adolescentes</strong> (12–14 años) · Wider World · Pearson<br>• <strong>Jóvenes y Adultos</strong> (15+) · Top Notch & Summit · Pearson<br><br>Preparación y administración oficial de exámenes TOEFL iBT y SAT.",
       options: [
         { label: "💬 Hablar con un asesor", target: "whatsapp", action: true },
         { label: "↩ Volver al inicio", target: "start" }
@@ -931,7 +931,7 @@ function initChatbot() {
       ]
     },
     location: {
-      text: "Nos encontramos en el corazón de Sucre:<br><br>📍 <strong>Calle Calvo #301</strong> esq. Potosí<br>🕐 Lun–Vie: 8:00 – 20:00<br>🕐 Sáb: 9:00 – 13:00<br><br>¡Te esperamos!",
+      text: "Nos encontramos en el corazón de Sucre:<br><br>📍 <strong>Calle Calvo #301</strong> esq. Potosí<br>🕐 Lun–Vie: 9:00 – 12:00 y 15:30 – 19:30<br>🕐 Sáb y Dom: Cerrado<br><br>¡Te esperamos!",
       options: [
         { label: "↩ Volver al inicio", target: "start" }
       ]
