@@ -20,7 +20,7 @@ const PROGRAMS_DATA = {
       "Grupos de máximo 14 niños por aula",
       "Evaluaciones por módulo con reporte a los padres"
     ],
-    schedule: ["Lun & Mié · 16:00 – 17:30", "Mar & Jue · 16:00 – 17:30"],
+    schedule: ["Lun a Vie · 9:00 – 10:00 AM", "Lun a Vie · 15:00 – 16:00 PM", "Lun a Vie · 16:00 – 17:00 PM"],
     levels: ["A1", "A1+", "A2"],
     photo: "images/kids.jpg",
     photoPosition: "center",
@@ -39,10 +39,9 @@ const PROGRAMS_DATA = {
     bullets: [
       "Textos oficiales: Wider World (Pearson)",
       "Desarrollo de fluidez conversacional y pensamiento crítico",
-      "Proyectos colaborativos, debates y clubes culturales",
-      "Asesoramiento gratuito para estudios con EducationUSA"
+      "Proyectos colaborativos, debates y clubes culturales"
     ],
-    schedule: ["Lun & Mié · 17:45 – 19:15", "Mar & Jue · 17:45 – 19:15"],
+    schedule: ["Lun a Vie · 9:00 – 10:00 AM", "Lun a Vie · 15:00 – 16:00 PM", "Lun a Vie · 16:00 – 17:00 PM", "Lun a Vie · 18:00 – 19:00 PM"],
     levels: ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2"],
     photo: "images/adoslecentes.jpg",
     photoPosition: "center 60%",
@@ -62,9 +61,10 @@ const PROGRAMS_DATA = {
       "Textos oficiales: Top Notch y Summit (Pearson)",
       "Módulos de Grammar A, Grammar B y Conversation avanzado",
       "Programa CBATELP: certificación institucional de alto nivel",
-      "Preparación TOEFL iBT y certificación del Ministerio de Educación"
+      "Preparación para el examen TOEFL iBT",
+      "Examen de identificación de nivel al ingreso"
     ],
-    schedule: ["Lun a Vie · 7:00 – 8:30", "Lun a Vie · 19:00 – 20:30"],
+    schedule: ["Lun a Vie · 8:30 – 10:00 AM", "Lun a Vie · 17:00 – 18:30 PM", "Lun a Vie · 18:30 – 20:00 PM", "Lun a Vie · 20:00 – 21:30 PM"],
     levels: ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C2"],
     photo: "images/jovenes_adultos.jpg",
     photoPosition: "center 80%",
@@ -657,9 +657,9 @@ const galleryData = {
     ],
     cta: { text: "Contactar biblioteca →", href: "tel:+59146443155", style: "outline" },
     images: [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200&q=80",
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
-      "https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=800&q=80"
+      "images/biblioteca_1.webp",
+      "images/biblioteca_2.webp",
+      "images/biblioteca_3.webp"
     ]
   },
 
@@ -673,17 +673,18 @@ const galleryData = {
       "Asesoramiento individual y grupal sobre universidades en Estados Unidos",
       "Información sobre más de 4,000 instituciones educativas acreditadas",
       "Orientación sobre financiamiento, becas parciales y totales disponibles",
-      "Preparación y orientación para exámenes TOEFL iBT, SAT, GRE y GMAT",
+      "Preparación y orientación para exámenes TOEFL iBT, SAT, GRE, GMAT, USMLE y LSAT",
       "Servicio al Visitante Internacional para asesores de universidades extranjeras",
       "Sesiones informativas con representantes de universidades de EE.UU.",
       "Orientación para trámite de visa de estudiante F-1 y J-1",
-      "Todos los servicios son 100% gratuitos · Sin excepción"
+      "Todos los servicios son 100% gratuitos · Sin excepción",
+      "Chat & Coffee: sesiones de información y asesoría específica · Jueves 17:30"
     ],
     cta: { text: "Solicitar asesoría → linktr.ee/EdUSAbo", href: "https://linktr.ee/EdUSAbo", style: "red", external: true },
     images: [
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=80",
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80",
-      "https://images.unsplash.com/photo-1519452314545-5606d04269e8?w=800&q=80"
+      "images/educationusa_1.webp",
+      "images/educationusa_2.webp",
+      "images/educationusa_3.webp"
     ]
   },
 
@@ -703,8 +704,8 @@ const galleryData = {
     ],
     cta: { text: "Consultar talleres disponibles →", href: "#contacto", style: "outline" },
     images: [
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80",
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+      "images/educationusa_4.webp",
+      "images/biblioteca_3.webp",
       "https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=800&q=80"
     ]
   },
@@ -725,9 +726,9 @@ const galleryData = {
     ],
     cta: { text: "Ver calendario de eventos →", href: "#calendario", style: "outline" },
     images: [
-      "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=80",
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
-      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80"
+      "images/cultura_1.webp",
+      "images/cultura_2.webp",
+      "images/cultura_3.webp"
     ]
   }
 };
