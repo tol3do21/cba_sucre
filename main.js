@@ -22,7 +22,7 @@ const PROGRAMS_DATA = {
     ],
     schedule: ["Lun a Vie · 9:00 – 10:00 AM", "Lun a Vie · 15:00 – 16:00 PM", "Lun a Vie · 16:00 – 17:00 PM"],
     levels: ["A1", "A1+", "A2"],
-    photo: "images/kids.jpg",
+    photo: "images/kids.webp",
     photoPosition: "center",
     photoScale: "1"
   },
@@ -43,7 +43,7 @@ const PROGRAMS_DATA = {
     ],
     schedule: ["Lun a Vie · 9:00 – 10:00 AM", "Lun a Vie · 15:00 – 16:00 PM", "Lun a Vie · 16:00 – 17:00 PM", "Lun a Vie · 18:00 – 19:00 PM"],
     levels: ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2"],
-    photo: "images/adoslecentes.jpg",
+    photo: "images/adoslecentes.webp",
     photoPosition: "center 60%",
     photoScale: "1.05"
   },
@@ -66,7 +66,7 @@ const PROGRAMS_DATA = {
     ],
     schedule: ["Lun a Vie · 8:30 – 10:00 AM", "Lun a Vie · 17:00 – 18:30 PM", "Lun a Vie · 18:30 – 20:00 PM", "Lun a Vie · 20:00 – 21:30 PM"],
     levels: ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C2"],
-    photo: "images/jovenes_adultos.jpg",
+    photo: "images/jovenes_adultos.webp",
     photoPosition: "center 80%",
     photoScale: "1"
   }

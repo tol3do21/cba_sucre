@@ -2,9 +2,9 @@ node_modules/
 .gemini/
 CBA Sucre Website Material*
 American Spaces Logos*
-*.png
-*.webp
-*.img
+images/Biblioteca/
+images/Cultural_events/
+images/Eduaction_USA/
 *.zip
 *.rar
 .DS_Store
