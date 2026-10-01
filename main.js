@@ -704,9 +704,11 @@ const galleryData = {
     ],
     cta: { text: "Consultar talleres disponibles →", href: "#contacto", style: "outline" },
     images: [
-      "images/educationusa_4.webp",
-      "images/biblioteca_3.webp",
-      "https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=800&q=80"
+      "images/Maker_space/maker_1.jpg",
+      "images/Maker_space/maker_2.jpg",
+      "images/Maker_space/maker_3.jpg",
+      "images/Maker_space/maker_4.jpg",
+      "images/Maker_space/maker_5.jpg"
     ]
   },
 
@@ -726,7 +728,9 @@ const galleryData = {
     ],
     cta: { text: "Ver calendario de eventos →", href: "#calendario", style: "outline" },
     images: [
-      "images/cultura_1.webp",
+      "images/cultura_elevate.jpg",
+      "images/cultura_equipo.jpg",
+      "images/cultura_docente.jpg",
       "images/cultura_2.webp",
       "images/cultura_3.webp"
     ]
